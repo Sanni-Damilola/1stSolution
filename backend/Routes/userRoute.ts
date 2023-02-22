@@ -11,7 +11,7 @@ import {
 const route = Router();
 route.route("/postUser").post(registerUser); // register User
 route.route("/deleteAll").delete(deleteAllUser); // delete All User
-route.route("/send/:userId/:walletId").patch(sendToAnotherWallet); // delete All User
-route.route("/getall").get(getAllUser); // delete All User
+route.route("/send/:userId/:walletId").patch(sendToAnotherWallet); // update 
+route.route("/getall").get(getAllUser); // get All User
 
 export default route;
