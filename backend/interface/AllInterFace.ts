@@ -7,4 +7,5 @@ export interface iData {
   accountNumber: number;
   verified: boolean;
   wallet: {}[];
+  history: {}[];
 }
