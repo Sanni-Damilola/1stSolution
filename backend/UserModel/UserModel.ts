@@ -28,8 +28,16 @@ const userSchema = new mongoose.Schema<IUser>({
   verified: {
     type: Boolean,
   },
-  wallet: {
-    type: ,
-    required: true,
-  },
+  wallet: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "wallets",
+    },
+  ],
+  history: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "histories",
+    },
+  ],
 });
