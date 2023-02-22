@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { registerUser } from "../Controller/userController";
+import { deleteAllUser, registerUser } from "../Controller/userController";
 
 const route = Router();
-
-route.route("/postUser").post(registerUser);
+// creating User Route
+//  👇👇
+route.route("/postUser").post(registerUser); // register User
+route.route("/delete").post(deleteAllUser); // delete All User
 
 export default route;
