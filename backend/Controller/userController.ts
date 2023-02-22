@@ -5,6 +5,7 @@ import jwt from "jsonwebtoken";
 import walletModel from "../WalletModel/walletModel";
 import mongoose from "mongoose";
 
+
 export const registerUser = async (req: Request, res: Response) => {
   try {
     const { name, email, password, userName, phoneNumber } = req.body;
@@ -48,11 +49,11 @@ export const registerUser = async (req: Request, res: Response) => {
       error: error,
     });
   }
-};
+}; //Creating User
 
 export const deleteAllUser = async (req: Request, res: Response) => {
   const deleteAllUser = await userModel.deleteMany();
   res.status(200).json({
     message: "Deleted All User",
   });
-};
+}; // deleteing All User
