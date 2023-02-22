@@ -84,7 +84,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
           message: `Your Account has been credited with ${amount} from ${getReceiver?.name}`,
           transactionRefrence: "debit",
           transactionType: generateReferenceNumber, // generateReferenceNumber {from line 65 👆👆}
-        });
+        }); // Sender History
       }
     } else {
     }
