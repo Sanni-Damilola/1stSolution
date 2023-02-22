@@ -4,6 +4,7 @@ import userModel from "../UserModel/UserModel";
 import jwt from "jsonwebtoken";
 import walletModel from "../WalletModel/walletModel";
 import mongoose from "mongoose";
+import historyModel from "../HistoryModel/historyModel";
 
 export const registerUser = async (req: Request, res: Response) => {
   try {
@@ -74,6 +75,16 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
           message: "Insufficient fund",
         });
       } else {
+        await walletModel.findByIdAndUpdate(getSenderWallet?._id, {
+          credit: 0,
+          debit: amount,
+        });
+
+        const createSenderHistory = await historyModel.create({
+          message: `Your Account has been credited with ${amount} from ${getReceiver?.name}`,
+          transactionRefrence: "debit",
+          transactionType: generateReferenceNumber, // generateReferenceNumber {from line 65 👆👆}
+        });
       }
     } else {
     }
