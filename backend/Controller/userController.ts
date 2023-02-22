@@ -56,7 +56,7 @@ export const deleteAllUser = async (req: Request, res: Response) => {
   return res.status(200).json({
     message: "Deleted All User",
   });
-}; // deleteing All User
+}; // deleteing All User,Wallet,History
 
 export const sendToAnotherWallet = async (req: Request, res: Response) => {
   try {
@@ -67,8 +67,8 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
       accountNumber,
     }); // getting receiver
     const getSender = await userModel.findById(req.params.userId); // getting sender
-    const getSenderWallet = await walletModel.findById(getReceiver?._id); // geting Sender Wallet {so a sender(user) can debit from it}
-    const getReceiverWallet = await walletModel.findById(getSender?._id); // geting Recevier Wallet {so a Recevier(user) can creidt to it}
+    const getSenderWallet = await walletModel.findById(getSender?._id); // geting Sender Wallet {so a sender(user) can debit from it}
+    const getReceiverWallet = await walletModel.findById(getReceiver?._id); // geting Recevier Wallet {so a Recevier(user) can creidt to it}
 
     if (getSender && getReceiver) {
       if (amount > getSenderWallet?.balance!) {
@@ -91,6 +91,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
           new mongoose.Types.ObjectId(createSenderHistory?._id)
         ); //  pushing data to history {in userModel(line 43) }
         getSender.save();
+        3;
 
         await walletModel.findByIdAndUpdate(getReceiver._id, {
           balance: getReceiverWallet?.balance! + amount, // Increasing Recevier Balance
