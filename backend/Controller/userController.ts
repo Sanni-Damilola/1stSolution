@@ -78,14 +78,18 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         await walletModel.findByIdAndUpdate(getSenderWallet?._id, {
           credit: 0,
           debit: amount,
-        });
+        }); // updating sender Wallet
 
         const createSenderHistory = await historyModel.create({
           message: `Your Account has been credited with ${amount} from ${getReceiver?.name}`,
           transactionRefrence: "debit",
           transactionType: generateReferenceNumber, // generateReferenceNumber {from line 65 👆👆}
         }); // Sender History
-        getSender?.history?.push(new mongoose.Types.ObjectId(createSenderHistory?._id))
+        getSender?.history?.push(
+          new mongoose.Types.ObjectId(createSenderHistory?._id)
+        ); 
+
+        
       }
     } else {
     }
