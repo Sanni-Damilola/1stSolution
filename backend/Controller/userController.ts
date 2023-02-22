@@ -54,7 +54,7 @@ export const registerUser = async (req: Request, res: Response) => {
 export const deleteAllUser = async (req: Request, res: Response) => {
   const deleteAllUser = await userModel.deleteMany(); // deleting All User
   const deleteAllHistory= await historyModel.deleteMany(); // deleting All History
-  const deleteAllWallet = await walletModel.deleteMany(); 
+  const deleteAllWallet = await walletModel.deleteMany(); // deleting All Wallet
   return res.status(200).json({
     message: "Deleted All User",
   });
