@@ -5,7 +5,6 @@ import jwt from "jsonwebtoken";
 import walletModel from "../WalletModel/walletModel";
 import mongoose from "mongoose";
 
-
 export const registerUser = async (req: Request, res: Response) => {
   try {
     const { name, email, password, userName, phoneNumber } = req.body;
@@ -33,7 +32,7 @@ export const registerUser = async (req: Request, res: Response) => {
     }); // creating a wallet
     register?.wallet.push(new mongoose.Types.ObjectId(createWallet?._id));
 
-    res.status(201).json({
+    return res.status(201).json({
       message: "created",
       data: register,
       token: jwt.sign(
@@ -44,7 +43,7 @@ export const registerUser = async (req: Request, res: Response) => {
       ),
     }); // geting a token
   } catch (error) {
-    res.status(400).json({
+    return res.status(400).json({
       message: "An Error Occured in registerUser",
       error: error,
     });
@@ -53,16 +52,18 @@ export const registerUser = async (req: Request, res: Response) => {
 
 export const deleteAllUser = async (req: Request, res: Response) => {
   const deleteAllUser = await userModel.deleteMany();
-  res.status(200).json({
+  return res.status(200).json({
     message: "Deleted All User",
   });
 }; // deleteing All User
 
-
 export const sendToAnotherWallet = async (req: Request, res: Response) => {
- 
+    try {
+        
+    } catch (error) {
+         return res.status(400).json({
+           message: "An Error Occured in sendToAnotherWallet",
+           error: error,
+         });
+    }
 }; // {wallet tranction} ... Sending to another Wallet
-
-
-
-
