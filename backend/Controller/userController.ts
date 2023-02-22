@@ -77,7 +77,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         });
       } else {
         await walletModel.findByIdAndUpdate(getSenderWallet?._id, {
-          balance: getSenderWallet?.balance! - amount,
+          balance: getSenderWallet?.balance! - amount, // Decreasing Recevier Balance
           credit: 0,
           debit: amount,
         }); // updating sender Wallet
@@ -93,7 +93,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         getSender.save();
 
         await walletModel.findByIdAndUpdate(getReceiver._id, {
-          balance: getReceiverWallet?.balance! + amount, // increasing Recevier Balance
+          balance: getReceiverWallet?.balance! + amount, // Increasing Recevier Balance
           credit: amount,
           debit: 0,
         }); // updating Receiver Wallet
