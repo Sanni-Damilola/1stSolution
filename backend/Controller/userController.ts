@@ -56,7 +56,7 @@ export const deleteAllUser = async (req: Request, res: Response) => {
   return res.status(200).json({
     message: "Deleted All User",
   });
-}; // deleteing All User,Wallet,History
+}; // deleteing All User, Wallet and History
 
 export const sendToAnotherWallet = async (req: Request, res: Response) => {
   try {
