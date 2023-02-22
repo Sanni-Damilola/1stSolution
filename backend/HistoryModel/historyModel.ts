@@ -5,16 +5,19 @@ import { IHistory } from "../interface/AllInterFace";
 //  👇👇
 interface MainData extends IHistory, mongoose.Document {}
 
-const historySchema = new mongoose.Schema<IHistory>({
-  message: {
-    type: String,
+const historySchema = new mongoose.Schema<IHistory>(
+  {
+    message: {
+      type: String,
+    },
+    transactionRefrence: {
+      type: Number,
+    },
+    transactionType: {
+      type: String,
+    },
   },
-  transactionRefrence: {
-    type: Number,
-  },
-  transactionType: {
-    type: String,
-  },
-});
+  { timestamps: true }
+);
 
 export default mongoose.model<MainData>("histories", historySchema);
