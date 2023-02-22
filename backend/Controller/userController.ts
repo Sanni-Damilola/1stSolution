@@ -10,13 +10,14 @@ export const registerUser = async (req: Request, res: Response) => {
     const hash = await bcrypt.hash(password, salt);
     const getDate = Date.now();
     const generateNumber = Math.floor(Math.random() * 7000) * getDate;
+    const num = 234;
 
     const register = await UserModel.create({
       name,
       email,
       password,
       userName,
-      phoneNumber,
+      phoneNumber: num + phoneNumber,
       verified: true,
       accountNumber: generateNumber,
     });
