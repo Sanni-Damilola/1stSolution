@@ -1,3 +1,4 @@
+// setting the Object Type
 export interface iData {
   name: string;
   email: string;
