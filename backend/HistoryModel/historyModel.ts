@@ -15,4 +15,4 @@ const historySchema = new mongoose.Schema<IHistory>({
   },
 });
 
-export default mongoose.model<MainData>("history", historySchema);
+export default mongoose.model<MainData>("histories", historySchema);
