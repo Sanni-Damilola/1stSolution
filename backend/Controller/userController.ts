@@ -97,6 +97,11 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
           credit: amount,
           debit: 0,
         }); // updating Receiver Wallet
+        const createRecevierHistory = await historyModel.create({
+          message: ``,
+       transactionRefrence: "debit",
+          transactionType: generateReferenceNumber, // generateReferenceNumber {from line 65 👆👆}
+        })
       }
     } else {
       return res.status(404).json({
