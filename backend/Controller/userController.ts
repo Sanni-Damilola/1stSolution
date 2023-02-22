@@ -102,6 +102,10 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
           transactionRefrence: "debit",
           transactionType: generateReferenceNumber, // generateReferenceNumber {from line 65 👆👆}
         });
+        getReceiver?.history?.push(
+          new mongoose.Types.ObjectId(createRecevierHistory?._id)
+        );
+        getReceiver.save()
       }
     } else {
       return res.status(404).json({
