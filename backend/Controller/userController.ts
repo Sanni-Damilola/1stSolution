@@ -73,7 +73,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
     }); // getting receiver
     const getReceiverWallet = await walletModel.findById(getReceiver?._id); // geting Recevier Wallet {so a Recevier(user) can creidt to it}
     const getSender = await userModel.findById(req.params.userId); // getting sender
-    const getSenderWallet = await walletModel.findById(req.params.userId); // geting Sender Wallet {so a sender(user) can debit from it}
+    const getSenderWallet = await walletModel.findById(req.params.welletId); // geting Sender Wallet {so a sender(user) can debit from it}
 
     if (getSender && getReceiver) {
       if (amount > getSenderWallet?.balance!) {
