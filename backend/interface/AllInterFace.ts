@@ -19,6 +19,6 @@ export interface IWalletData {
 
 export interface IHistory {
   message: string;
-  transactionRefrence: Number;
+  transactionRefrence: string;
   transactionType: string;
 } // setting the Object Type History

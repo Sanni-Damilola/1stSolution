@@ -11,7 +11,7 @@ const historySchema = new mongoose.Schema<IHistory>(
       type: String,
     },
     transactionRefrence: {
-      type: Number,
+      type: String,
     },
     transactionType: {
       type: String,
