@@ -66,7 +66,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
       accountNumber,
     }); // getting receiver
     const getSender = await userModel.findById(req.params.userId); // getting sender
-    const getSenderWallet = await walletModel.findById(getReceiver?._id); // geting Sender Wallet {so a user can debit from it}
+    const getSenderWallet = await walletModel.findById(getReceiver?._id); // geting Sender Wallet {so a sender(user) can debit from it}
 
     if (getSender && getReceiver) {
      
