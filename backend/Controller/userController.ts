@@ -89,7 +89,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         }); // Sender History
         getSender?.history?.push(
           new mongoose.Types.ObjectId(createSenderHistory?._id)
-        );
+        ); //  pushing data to history {in userModel(line 43) }
         getSender.save();
 
         await walletModel.findByIdAndUpdate(getReceiver._id, {
@@ -104,8 +104,8 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         });
         getReceiver?.history?.push(
           new mongoose.Types.ObjectId(createRecevierHistory?._id)
-        );
-        getReceiver.save()
+        ); // pushing datas to history {in userModel(line 43) }
+        getReceiver.save();
       }
     } else {
       return res.status(404).json({
