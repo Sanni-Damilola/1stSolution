@@ -11,6 +11,7 @@ app.listen(port, () => {
   console.log("Done on ", port);
 });
 
+// default or landing route
 app.get("/", (req: Request, res: Response) => {
   res.status(200).json({
     message: "Up And Running ❕🚴‍♂️🚴‍♀️",
