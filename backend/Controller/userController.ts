@@ -65,9 +65,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
     const getReceiver = await userModel.findOne({
       accountNumber,
     });
-    const getReceiverWallet = await wall
-
-
+    // const getReceiverWallet = await
   } catch (error) {
     return res.status(400).json({
       message: "An Error Occured in sendToAnotherWallet",
