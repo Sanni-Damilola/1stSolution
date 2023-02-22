@@ -107,6 +107,9 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         ); // pushing data to history {in userModel(line 43) }
         getReceiver.save();
       }
+      return res.status(200).json({
+        message: "transaction successfull",
+      });
     } else {
       return res.status(404).json({
         message: "Account not found",
@@ -119,8 +122,6 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
     });
   }
 }; // {wallet tranction} ... Sending to another Wallet
-
-
 
 export const getAllUser = async (req: Request, res: Response) => {
   try {
