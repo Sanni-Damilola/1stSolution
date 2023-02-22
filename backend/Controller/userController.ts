@@ -56,7 +56,7 @@ export const deleteAllUser = async (req: Request, res: Response) => {
   const deleteAllHistory= await historyModel.deleteMany(); // deleting All History
   const deleteAllWallet = await walletModel.deleteMany(); // deleting All Wallet
   return res.status(200).json({
-    message: "Deleted All User",
+    message: "Deleted All User, History and Wallet",
   });
 }; // deleteing All User, Wallet and History
 
