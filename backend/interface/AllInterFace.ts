@@ -1,5 +1,5 @@
 // setting the Object Type
-export interface iData {
+export interface IUser {
   name: string;
   email: string;
   password: string;
