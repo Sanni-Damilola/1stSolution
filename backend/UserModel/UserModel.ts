@@ -3,7 +3,7 @@ import { IUser } from "../interface/AllInterFace";
 
 interface MainData extends IUser, mongoose.Document {}
 
-const userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema<IUser>({
   name: {
     type: String,
     required: true,
@@ -24,10 +24,12 @@ const userSchema = new mongoose.Schema({
   },
   accountNumber: {
     type: Number,
-    required: true,
   },
   verified: {
-    type: String,
+    type: Boolean,
+  },
+  wallet: {
+    type: ,
     required: true,
   },
 });
