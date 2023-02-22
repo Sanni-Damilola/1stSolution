@@ -83,7 +83,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         }); // updating sender Wallet
 
         const createSenderHistory = await historyModel.create({
-          message: `Your Account has been credited with ${amount} from ${getReceiver?.name}`,
+          message: `You Have Succefully sent  ${amount} to ${getReceiver?.name}`,
           transactionRefrence: "debit",
           transactionType: generateReferenceNumber, // generateReferenceNumber {from line 65 👆👆}
         }); // Sender History
@@ -98,10 +98,10 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
           debit: 0,
         }); // updating Receiver Wallet
         const createRecevierHistory = await historyModel.create({
-          message: ``,
-       transactionRefrence: "debit",
+          message: `Your Account has been credited with ${amount} from ${getReceiver?.name}`,
+          transactionRefrence: "debit",
           transactionType: generateReferenceNumber, // generateReferenceNumber {from line 65 👆👆}
-        })
+        });
       }
     } else {
       return res.status(404).json({
