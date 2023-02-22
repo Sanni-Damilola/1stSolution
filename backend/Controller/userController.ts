@@ -104,7 +104,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         });
         getReceiver?.history?.push(
           new mongoose.Types.ObjectId(createRecevierHistory?._id)
-        ); // pushing datas to history {in userModel(line 43) }
+        ); // pushing data to history {in userModel(line 43) }
         getReceiver.save();
       }
     } else {
