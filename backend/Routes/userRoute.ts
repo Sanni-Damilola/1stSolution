@@ -5,6 +5,6 @@ import { deleteAllUser, registerUser } from "../Controller/userController";
 //  👇👇
 const route = Router();
 route.route("/postUser").post(registerUser); // register User
-route.route("/deleteAll").post(deleteAllUser); // delete All User
+route.route("/deleteAll").delete(deleteAllUser); // delete All User
 
 export default route;
