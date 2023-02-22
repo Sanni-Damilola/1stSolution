@@ -87,10 +87,8 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         }); // Sender History
         getSender?.history?.push(
           new mongoose.Types.ObjectId(createSenderHistory?._id)
-        ); 
-        getSender?.save()
-
-
+        );
+        getSender.save();
       }
     } else {
     }
