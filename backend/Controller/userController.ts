@@ -69,13 +69,12 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
     const getSenderWallet = await walletModel.findById(getReceiver?._id); // geting Sender Wallet {so a sender(user) can debit from it}
 
     if (getSender && getReceiver) {
-     
-      if (amount > getSenderWallet?.) {
-        
+      if (amount > getSenderWallet?.balance!) {
+        return res.status(400).json({
+          message: "Insufficient fund",
+        });
       } else {
-        
       }
-      
     } else {
     }
   } catch (error) {
