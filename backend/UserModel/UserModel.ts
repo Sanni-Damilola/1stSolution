@@ -27,6 +27,9 @@ const userSchema = new mongoose.Schema<IUser>({
   phoneNumber: {
     type: Number,
   },
+  amount: {
+    type: Number,
+  },
   accountNumber: {
     type: Number,
   },

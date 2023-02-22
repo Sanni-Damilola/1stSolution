@@ -5,6 +5,7 @@ export interface IUser {
   userName: string;
   phoneNumber: number;
   accountNumber: number;
+  amount: number;
   verified: boolean;
   wallet: {}[];
   history: {}[];
