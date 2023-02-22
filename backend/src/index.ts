@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import cors from "cors";
 import express, { Request, Response } from "express";
+import route from "../Routes/userRoute";
 
 const app = express();
 app.use(express.json()).use(cors());
@@ -19,6 +20,8 @@ app.get("/", (req: Request, res: Response) => {
     message: "Up And Running ❕🚴‍♂️🚴‍♀️",
   });
 });
+
+app.use("/api", route);
 
 // dataBase Name
 const url: string = "mongodb://localhost/solution";

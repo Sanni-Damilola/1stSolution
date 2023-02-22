@@ -26,7 +26,6 @@ const userSchema = new mongoose.Schema<IUser>({
   },
   phoneNumber: {
     type: Number,
-    required: true,
   },
   accountNumber: {
     type: Number,
