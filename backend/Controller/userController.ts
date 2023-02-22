@@ -57,3 +57,12 @@ export const deleteAllUser = async (req: Request, res: Response) => {
     message: "Deleted All User",
   });
 }; // deleteing All User
+
+
+export const sendToAnotherWallet = async (req: Request, res: Response) => {
+ 
+}; // {wallet tranction} ... Sending to another Wallet
+
+
+
+
