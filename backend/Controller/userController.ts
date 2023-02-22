@@ -12,7 +12,7 @@ export const registerUser = async (req: Request, res: Response) => {
     const salt = await bcrypt.genSalt(10);
     const hash = await bcrypt.hash(password, salt);
     const getDate = Date.now();
-    const generateNumber = Math.floor(Math.random() * 7000) * getDate;
+    const generateNumber = Math.floor(Math.random() * 7000) * getDate; // generating random numbers
     const num = 234; // country code
 
     const register = await userModel.create({
