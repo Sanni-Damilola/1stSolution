@@ -17,7 +17,8 @@ app.get("/", (req: Request, res: Response) => {
   });
 });
 
+// dataBase Name
 const url: string = "mongodb://localhost/solution";
 mongoose.connect(url).then(() => {
   console.log("connected to ", url);
-});
+}); // connecting to dataBase
