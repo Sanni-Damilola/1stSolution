@@ -51,7 +51,7 @@ export const registerUser = async (req: Request, res: Response) => {
   }
 }; //Creating User
 
-export const deleteAll_User_History_Wallet = async (
+export const deleteAll_User_History_And_Wallet = async (
   req: Request,
   res: Response
 ) => {
