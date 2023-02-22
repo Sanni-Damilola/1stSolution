@@ -5,6 +5,6 @@ const route = Router();
 // creating User Route
 //  👇👇
 route.route("/postUser").post(registerUser); // register User
-route.route("/delete").post(deleteAllUser); // delete All User
+route.route("/deleteAll").post(deleteAllUser); // delete All User
 
 export default route;

@@ -21,7 +21,7 @@ app.get("/", (req: Request, res: Response) => {
   });
 });
 
-app.use("/api", route);
+app.use("/api", route); // route
 
 // dataBase Name
 const url: string = "mongodb://localhost/solution";
