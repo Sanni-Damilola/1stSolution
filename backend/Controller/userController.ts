@@ -51,9 +51,12 @@ export const registerUser = async (req: Request, res: Response) => {
   }
 }; //Creating User
 
-export const deleteAllUser = async (req: Request, res: Response) => {
+export const deleteAl0lUser_History_Wallet = async (
+  req: Request,
+  res: Response
+) => {
   const deleteAllUser = await userModel.deleteMany(); // deleting All User
-  const deleteAllHistory= await historyModel.deleteMany(); // deleting All History
+  const deleteAllHistory = await historyModel.deleteMany(); // deleting All History
   const deleteAllWallet = await walletModel.deleteMany(); // deleting All Wallet
   return res.status(200).json({
     message: "Deleted All User, History and Wallet",
