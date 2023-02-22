@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 import { IWalletData } from "../interface/AllInterFace";
 
+
+// creating Wallet Model
+//  👇👇
 interface MainData extends IWalletData, mongoose.Document {}
 
 const walletSchema = new mongoose.Schema<IWalletData>({

@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 import { IUser } from "../interface/AllInterFace";
 
+// creating User Model
+//  👇👇
 interface MainData extends IUser, mongoose.Document {}
 
 const userSchema = new mongoose.Schema<IUser>({

@@ -1,4 +1,3 @@
-// setting the Object Type for User
 export interface IUser {
   name: string;
   email: string;
@@ -8,18 +7,16 @@ export interface IUser {
   verified: boolean;
   wallet: {}[];
   history: {}[];
-}
+} // setting the Object Type for User
 
-// setting the Object Type Wallet
 export interface IWalletData {
   balance: number;
   credit: number;
   debit: number;
-}
+} // setting the Object Type Wallet
 
-// setting the Object Type History
 export interface IHistory {
   message: string;
-  transactionRefrence: string;
+  transactionRefrence: Number;
   transactionType: string;
-}
+} // setting the Object Type History
