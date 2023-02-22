@@ -119,3 +119,19 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
     });
   }
 }; // {wallet tranction} ... Sending to another Wallet
+
+
+
+export const getAllUser = async (req: Request, res: Response) => {
+  try {
+    const getUsers = await userModel.find();
+    return res.status(404).json({
+      message: "users found",
+      data: getUsers,
+    });
+  } catch (error) {
+    return res.status(404).json({
+      message: "an error occured in getAllUser",
+    });
+  }
+}; //  getting all users
