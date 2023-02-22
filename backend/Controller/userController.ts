@@ -99,6 +99,9 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         }); // updating Receiver Wallet
       }
     } else {
+      return res.status(404).json({
+        message: "Account not found",
+      });
     }
   } catch (error) {
     return res.status(400).json({
