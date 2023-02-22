@@ -6,25 +6,22 @@ import route from "../Routes/userRoute";
 const app = express();
 app.use(express.json()).use(cors());
 
-// port number
-const port: number = 2001;
+const port: number = 2001; // port number
 
 // listening to port
 app.listen(port, () => {
   console.log("Done on ", port);
 });
 
-// default or landing route
 app.get("/", (req: Request, res: Response) => {
   res.status(200).json({
     message: "Up And Running ❕🚴‍♂️🚴‍♀️",
   });
-});
+}); // default or landing route
 
 app.use("/api", route); // route
 
-// dataBase Name
-const url: string = "mongodb://localhost/solution";
+const url: string = "mongodb://localhost/solution"; // dataBase Name
 mongoose.connect(url).then(() => {
   console.log("connected to ", url);
 }); // connecting to dataBase
