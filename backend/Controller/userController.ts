@@ -58,12 +58,20 @@ export const deleteAllUser = async (req: Request, res: Response) => {
 }; // deleteing All User
 
 export const sendToAnotherWallet = async (req: Request, res: Response) => {
-    try {
-        
-    } catch (error) {
-         return res.status(400).json({
-           message: "An Error Occured in sendToAnotherWallet",
-           error: error,
-         });
-    }
+  try {
+    const { accountNumber, amount } = req.body;
+
+    const generateRefrenceNumber = Math.floor(Math.random() * 34567767) + 234; // generate Refefrence Number
+    const getReceiver = await userModel.findOne({
+      accountNumber,
+    });
+    const getReceiverWallet = await wall
+
+
+  } catch (error) {
+    return res.status(400).json({
+      message: "An Error Occured in sendToAnotherWallet",
+      error: error,
+    });
+  }
 }; // {wallet tranction} ... Sending to another Wallet
