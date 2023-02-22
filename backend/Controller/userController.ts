@@ -61,11 +61,11 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
   try {
     const { accountNumber, amount } = req.body;
 
-    const generateRefrenceNumber = Math.floor(Math.random() * 34567767) + 234; // generate Refefrence Number
+    const generateReferenceNumber = Math.floor(Math.random() * 34567767) + 234; // generate Refefrence Number
     const getReceiver = await userModel.findOne({
       accountNumber,
-    });
-    // const getReceiverWallet = await
+    }); // getting receiver
+    const getReceiverWallet = await walletModel.findById(req.params.userId);
   } catch (error) {
     return res.status(400).json({
       message: "An Error Occured in sendToAnotherWallet",
