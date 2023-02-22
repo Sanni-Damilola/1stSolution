@@ -5,8 +5,10 @@ import express, { Request, Response } from "express";
 const app = express();
 app.use(express.json()).use(cors());
 
+// port number
 const port: number = 2001;
 
+// listening to port
 app.listen(port, () => {
   console.log("Done on ", port);
 });
