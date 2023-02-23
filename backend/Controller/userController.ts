@@ -99,7 +99,6 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
           new mongoose.Types.ObjectId(createSenderHistory?._id)
         ); //  pushing data to history {in userModel(line 43) }
         getSender.save();
-        3;
 
         await walletModel.findByIdAndUpdate(getReceiver._id, {
           balance: getReceiverWallet?.balance! + amount, // Increasing Recevier Balance
@@ -119,7 +118,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
       return res.status(200).json({
         message: "transaction successfull",
       });
-    } else if (getSender?.accountNumber === getSender?.accountNumber) {
+    } else if (getSender && getSender) {
       return res.status(200).json({
         message: "transaction falied",
       });
