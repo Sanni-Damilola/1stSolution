@@ -81,7 +81,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         return res.status(400).json({
           message: "Insufficient fund",
         });
-      } else if (getSender?.accountNumber === getSender?.accountNumber) { // prevent sender to credit them self
+      } else if (getSender?.accountNumber === getSender?.accountNumber) { // {prevent sender to credit them self from same account}
         return res.status(200).json({
           message: "transaction falied",
         });
