@@ -67,7 +67,6 @@ export const deleteAll_User_History_And_Wallet = async (
 export const sendToAnotherWallet = async (req: Request, res: Response) => {
   try {
     const { accountNumber, amount } = req.body;
-
     const generateReferenceNumber = Math.floor(Math.random() * 34567767) + 234; // generate Refefrence Number
     const getReceiver = await userModel.findOne({
       accountNumber,
@@ -78,7 +77,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
       req.params.senderWalletId
     ); // geting Sender Wallet {so a sender(user) can debit from it}
 
-    if (getSender && getReceiver?.accountNumber) {
+    if (getSender && getReceiver) {
       if (amount > getSenderWallet?.balance!) {
         return res.status(400).json({
           message: "Insufficient fund",
