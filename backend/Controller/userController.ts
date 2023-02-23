@@ -81,8 +81,10 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         return res.status(400).json({
           message: "Insufficient fund",
         });
-      } else if(getSender?.accountNumber === getSender?.) {
-
+      } else if (getSender?.accountNumber === getSender?.accountNumber) {
+        return res.status(200).json({
+          message: "transaction falied",
+        });
       } else {
         await walletModel.findByIdAndUpdate(getSenderWallet?._id, {
           balance: getSenderWallet?.balance! - amount, // Decreasing Recevier Balance
