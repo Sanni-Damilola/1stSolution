@@ -78,8 +78,8 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
     ); // geting Sender Wallet {so a sender(user) can debit from it}
 
     if (
-      getSender !== getReceiver &&
-      getSender?.accountNumber !== getSender?.accountNumbe
+      getSender && getReceiver &&
+      getSender?.accountNumber !== getSender?.accountNumber
     ) {
       if (amount > getSenderWallet?.balance!) {
         return res.status(400).json({
@@ -119,10 +119,6 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
       }
       return res.status(200).json({
         message: "transaction successfull",
-      });
-    } else if (getSender && getSender) {
-      return res.status(200).json({
-        message: "transaction falied",
       });
     } else {
       return res.status(404).json({
