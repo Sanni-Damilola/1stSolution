@@ -100,9 +100,9 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         getSender?.history?.push(
           new mongoose.Types.ObjectId(createSenderHistory?._id)
         ); //  pushing data to history {in userModel(line 43) }
-        getSender.save();
+        getSender?.save();
 
-        await walletModel.findByIdAndUpdate(getReceiver._id, {
+        await walletModel.findByIdAndUpdate(getReceiver?._id, {
           balance: getReceiverWallet?.balance! + amount, // Increasing Recevier Balance
           credit: amount,
           debit: 0,
@@ -115,7 +115,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
         getReceiver?.history?.push(
           new mongoose.Types.ObjectId(createRecevierHistory?._id)
         ); // pushing data to history {in userModel(line 43) }
-        getReceiver.save();
+        getReceiver?.save();
       }
       return res.status(200).json({
         message: "transaction successfull",
