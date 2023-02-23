@@ -32,6 +32,7 @@ export const registerUser = async (req: Request, res: Response) => {
       debit: 0,
     }); // creating a wallet
     register?.wallet.push(new mongoose.Types.ObjectId(createWallet?._id));
+    register.
 
     return res.status(201).json({
       message: "created",
