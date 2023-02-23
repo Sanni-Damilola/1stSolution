@@ -77,7 +77,10 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
       req.params.senderWalletId
     ); // geting Sender Wallet {so a sender(user) can debit from it}
 
-    if (getSender && getReceiver) {
+    if (
+      getSender !== getReceiver &&
+      getSender?.accountNumber !== getSender?.accountNumbe
+    ) {
       if (amount > getSenderWallet?.balance!) {
         return res.status(400).json({
           message: "Insufficient fund",
