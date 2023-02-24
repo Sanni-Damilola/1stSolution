@@ -15,7 +15,7 @@ export const registerUser = async (req: Request, res: Response) => {
     const generateNumber = Math.floor(Math.random() * 7000) * getDate; // generating random numbers
     const num = 234; // country code
 
-    const register = await userModel.create({
+    const register = await userModel.create({ //
       name,
       email,
       password,
@@ -23,16 +23,16 @@ export const registerUser = async (req: Request, res: Response) => {
       phoneNumber: num + phoneNumber,
       verified: true,
       accountNumber: generateNumber,
-    });
+    }); //
 
-    const createWallet = await walletModel.create({
+    const createWallet = await walletModel.create({ //
       _id: register?._id,
       balance: 1000,
       credit: 0,
       debit: 0,
     }); // creating a wallet
     register?.wallet.push(new mongoose.Types.ObjectId(createWallet?._id));
-    register.save();
+    register.save(); //.
 
     return res.status(201).json({
       message: "created",
