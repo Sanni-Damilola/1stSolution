@@ -83,7 +83,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
           message: "Insufficient fund",
         });
       } else {
-        if (getSender?.accountNumber === getSender?.accountNumber) {
+        if (getSender?.accountNumber === accountNumber) {
           return res.status(400).json({
             message: "transaction fail",
           });
