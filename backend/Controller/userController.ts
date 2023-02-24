@@ -118,10 +118,10 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
           new mongoose.Types.ObjectId(createRecevierHistory?._id)
         ); // pushing data to history {in userModel(line 43) }
         getReceiver?.save();
+        return res.status(200).json({
+          message: "transaction successfull",
+        });
       }
-      return res.status(200).json({
-        message: "transaction successfull",
-      });
     } else {
       return res.status(404).json({
         message: "Account not found",
