@@ -87,38 +87,37 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
           return res.status(400).json({
             message: "transaction fail",
           });
-        } else {
-          await walletModel.findByIdAndUpdate(getSenderWallet?._id, {
-            balance: getSenderWallet?.balance! - amount, // Decreasing Recevier Balance
-            credit: 0,
-            debit: amount,
-          }); // updating sender Wallet
+        } // prevent user from crediting ThemSelf
+        await walletModel.findByIdAndUpdate(getSenderWallet?._id, {
+          balance: getSenderWallet?.balance! - amount, // Decreasing Recevier Balance
+          credit: 0,
+          debit: amount,
+        }); // updating sender Wallet
 
-          const createSenderHistory = await historyModel.create({
-            message: `You Have Succefully sent ${amount} to ${getReceiver?.name}`,
-            transactionRefrence: "debit",
-            transactionType: generateReferenceNumber, // generateReferenceNumber {from line 65 👆👆}
-          }); // Sender History
-          getSender?.history?.push(
-            new mongoose.Types.ObjectId(createSenderHistory?._id)
-          ); //  pushing data to history {in userModel(line 43) }
-          getSender?.save();
+        const createSenderHistory = await historyModel.create({
+          message: `You Have Succefully sent ${amount} to ${getReceiver?.name}`,
+          transactionRefrence: "debit",
+          transactionType: generateReferenceNumber, // generateReferenceNumber {from line 65 👆👆}
+        }); // Sender History
+        getSender?.history?.push(
+          new mongoose.Types.ObjectId(createSenderHistory?._id)
+        ); //  pushing data to history {in userModel(line 43) }
+        getSender?.save();
 
-          await walletModel.findByIdAndUpdate(getReceiver?._id, {
-            balance: getReceiverWallet?.balance! + amount, // Increasing Recevier Balance
-            credit: amount,
-            debit: 0,
-          }); // updating Receiver Wallet
-          const createRecevierHistory = await historyModel.create({
-            message: `Your Account has been credited with ${amount} from ${getReceiver?.name}`,
-            transactionRefrence: "debit",
-            transactionType: generateReferenceNumber, // generateReferenceNumber {from line 65 👆👆}
-          });
-          getReceiver?.history?.push(
-            new mongoose.Types.ObjectId(createRecevierHistory?._id)
-          ); // pushing data to history {in userModel(line 43) }
-          getReceiver?.save();
-        }
+        await walletModel.findByIdAndUpdate(getReceiver?._id, {
+          balance: getReceiverWallet?.balance! + amount, // Increasing Recevier Balance
+          credit: amount,
+          debit: 0,
+        }); // updating Receiver Wallet
+        const createRecevierHistory = await historyModel.create({
+          message: `Your Account has been credited with ${amount} from ${getReceiver?.name}`,
+          transactionRefrence: "debit",
+          transactionType: generateReferenceNumber, // generateReferenceNumber {from line 65 👆👆}
+        });
+        getReceiver?.history?.push(
+          new mongoose.Types.ObjectId(createRecevierHistory?._id)
+        ); // pushing data to history {in userModel(line 43) }
+        getReceiver?.save();
       }
       return res.status(200).json({
         message: "transaction successfull",
