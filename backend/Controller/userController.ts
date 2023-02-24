@@ -133,7 +133,7 @@ export const sendToAnotherWallet = async (req: Request, res: Response) => {
       error: error,
     });
   }
-}; // {wallet tranction} ... Sending to another Wallet
+}; // {wallet transaction} ... Sending to another Wallet
 
 export const getAllUser = async (req: Request, res: Response) => {
   try {
