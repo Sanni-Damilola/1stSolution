@@ -15,10 +15,10 @@ export interface IWalletData {
   balance: number;
   credit: number;
   debit: number;
-} // setting the Object Type Wallet
+} // setting the Object Type for Wallet
 
 export interface IHistory {
   message: string;
   transactionRefrence: string;
   transactionType: string;
-} // setting the Object Type History
+} // setting the Object Type for History
