@@ -20,13 +20,8 @@ function App() {
           Learn React
         </a>
       </header>
-      <Text></Text>
     </div>
   );
 }
 
 export default App;
-
-const Text = styled.div`
-  display: flex;
-`;
