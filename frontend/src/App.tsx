@@ -1,6 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import "./App.css"
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import styled from "styled-components";
 
 function App() {
   return (
@@ -19,8 +20,13 @@ function App() {
           Learn React
         </a>
       </header>
+      <Text></Text>
     </div>
   );
 }
 
 export default App;
+
+const Text = styled.div`
+  display: flex;
+`;
