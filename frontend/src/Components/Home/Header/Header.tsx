@@ -3,11 +3,10 @@ import styled from "styled-components";
 import logo from "../../Image/logo.svg";
 
 const Header = () => {
-
-  const [show, setShow] = React.useState(false)
+  const [show, setShow] = React.useState(false);
 
   const changeHeaderColor = () => {
-    if (window.scrollY >= 70) {
+    if (window.scrollY >= 1) {
       setShow(true);
     } else {
       setShow(false);
@@ -17,7 +16,7 @@ const Header = () => {
   window.addEventListener("scroll", changeHeaderColor);
 
   return (
-    <Container>
+    <Container boxShadow={show ? "value" : ""}>
       <Wrapper>
         <Logo src={logo} />
         <ButtonWrapper>
@@ -31,13 +30,17 @@ const Header = () => {
 
 export default Header;
 
-const Container = styled.div`
+const Container = styled.div<{ boxShadow: string }>`
   width: 100%;
   height: 90px;
+  position: sticky;
+  top: 0;
+  transition: all 650ms;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: ${({ boxShadow }) =>
+    boxShadow ? "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" : "none"};
 `;
 
 const Wrapper = styled.div`

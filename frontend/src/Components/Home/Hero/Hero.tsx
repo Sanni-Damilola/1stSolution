@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
 const Hero = () => {
-  return (
-    <div>Hero</div>
-  )
-}
+  return <Container>Hero</Container>;
+};
 
-export default Hero
+export default Hero;
+
+const Container = styled.div`
+  height: 900px;
+`;
