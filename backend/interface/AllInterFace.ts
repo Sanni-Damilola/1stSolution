@@ -22,3 +22,19 @@ export interface IHistory {
   transactionRefrence: string;
   transactionType: string;
 } // setting the Object Type for History
+
+
+export interface IHistory {
+  message: string;
+  transactionRefrence: string;
+  transactionType: string;
+} // setting the Object Type for History
+
+
+
+export interface IQuickSave {
+  amount: number;
+  autoSave: boolean;
+  dateTime: string | number;
+  interest: number;
+} // setting the Object Type for IQuickSave
