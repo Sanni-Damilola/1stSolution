@@ -15,7 +15,8 @@ export const registerUser = async (req: Request, res: Response) => {
     const generateNumber = Math.floor(Math.random() * 7000) * getDate; // generating random numbers
     const num = 234; // country code
 
-    const register = await userModel.create({ //
+    const register = await userModel.create({
+      //
       name,
       email,
       password,
@@ -25,7 +26,8 @@ export const registerUser = async (req: Request, res: Response) => {
       accountNumber: generateNumber,
     }); //
 
-    const createWallet = await walletModel.create({ //
+    const createWallet = await walletModel.create({
+      //
       _id: register?._id,
       balance: 1000,
       credit: 0,
@@ -148,3 +150,13 @@ export const getAllUser = async (req: Request, res: Response) => {
     });
   }
 }; //  getting all users
+
+export const fundWalletFromBank = async (req: Request, res: Response) => {
+  try {
+  } catch (error) {
+    return res.status(404).json({
+      message: "an error occured in fundWalletFromBank",
+      error: error,
+    });
+  }
+}; // crediting wallet from Bank Account
