@@ -3,13 +3,26 @@ import styled from "styled-components";
 import logo from "../../Image/logo.svg";
 
 const Header = () => {
+
+  const [show, setShow] = React.useState(false)
+
+  const changeHeaderColor = () => {
+    if (window.scrollY >= 70) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeHeaderColor);
+
   return (
     <Container>
       <Wrapper>
         <Logo src={logo} />
         <ButtonWrapper>
-          <SignIn></SignIn>
-          <SignUp></SignUp>
+          <SignIn>Sign in</SignIn>
+          <SignUp>Create free account</SignUp>
         </ButtonWrapper>
       </Wrapper>
     </Container>
@@ -21,20 +34,53 @@ export default Header;
 const Container = styled.div`
   width: 100%;
   height: 90px;
+  display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `;
 
 const Wrapper = styled.div`
-  width: 80%;
+  width: 87%;
   height: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 const Logo = styled.img`
-  width: 300px;
+  height: 33px;
 `;
 const ButtonWrapper = styled.div``;
-const SignIn = styled.div``;
-const SignUp = styled.div``;
+const SignIn = styled.button`
+  padding: 18px 23px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 9px;
+  transition: all 360ms;
+  color: rgb(12, 24, 37);
+  background-color: white;
+  font-size: 16.5px;
+  font-weight: 600;
+  :hover {
+    border: 1px solid rgb(13, 96, 216);
+    color: rgb(13, 96, 216);
+  }
+`;
+const SignUp = styled.button`
+  border-radius: 9px;
+  border: 0;
+  outline: none;
+  background-color: rgb(12, 24, 37);
+  transition: all 360ms;
+  color: white;
+  padding: 18px 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16.5px;
+  cursor: pointer;
+  :hover {
+    background-color: rgb(13, 96, 216);
+  }
+`;
