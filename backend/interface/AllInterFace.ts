@@ -15,9 +15,9 @@ export interface IWalletData {
   balance: number;
   credit: number;
   debit: number;
-  quickSave: {}[],
-  saveLock: {}[],
-  target: {}[],
+  quickSave: {}[];
+  saveLock: {}[];
+  target: {}[];
 } // setting the Object Type for Wallet
 
 export interface IHistory {
@@ -31,4 +31,10 @@ export interface IQuickSave {
   autoSave: boolean;
   dateTime: string | number;
   interest: number;
-} // setting the Object Type for IQuickSave
+} // setting the Object Type for QuickSave
+
+export interface ISaveLock {
+  amount: number;
+  startTime: string;
+  endTime: string;
+} // setting the Object Type for SaveLock
