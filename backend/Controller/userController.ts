@@ -156,6 +156,9 @@ export const fundWalletFromBank = async (req: Request, res: Response) => {
   try {
 
     const getUser = await userModel.findByIdAndUpdate(req.params.id) // get user
+    const getWallet = await walletModel.findByIdAndUpdate(req.params.id) // accessing user wallet
+
+
 
   } catch (error) {
     return res.status(404).json({
@@ -164,3 +167,4 @@ export const fundWalletFromBank = async (req: Request, res: Response) => {
     });
   }
 }; // crediting wallet from Bank Account
+
