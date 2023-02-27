@@ -147,6 +147,7 @@ export const getAllUser = async (req: Request, res: Response) => {
   } catch (error) {
     return res.status(404).json({
       message: "an error occured in getAllUser",
+      error: error,
     });
   }
 }; //  getting all users
