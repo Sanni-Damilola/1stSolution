@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 interface props {
   padding: string;
+  text: string;
 }
 
-const CallToActionButton: React.FC<props> = ({ padding }) => {
-  return <Button padding={padding}>CallToActionButton</Button>;
+const CallToActionButton: React.FC<props> = ({ padding ,text}) => {
+  return <Button padding={padding}>{text}</Button>;
 };
 
 export default CallToActionButton;
