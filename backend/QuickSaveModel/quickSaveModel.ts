@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { IQuickSave } from "../interface/AllInterFace";
 
-// creating History Model
+// creating QuickSave Model
 //  👇👇
 interface MainData extends IQuickSave, mongoose.Document {}
 
