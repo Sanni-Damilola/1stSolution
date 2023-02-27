@@ -37,4 +37,5 @@ export interface ISaveLock {
   amount: number;
   startTime: string;
   endTime: string;
+  interest: number;
 } // setting the Object Type for SaveLock
