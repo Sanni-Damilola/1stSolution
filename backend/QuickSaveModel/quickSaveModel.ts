@@ -8,13 +8,16 @@ interface MainData extends IQuickSave, mongoose.Document {}
 const historySchema = new mongoose.Schema<IQuickSave>(
   {
     amount: {
-      type: String,
+      type: Number,
     },
-    transactionRefrence: {
-      type: String,
+    autoSave: {
+      type: Boolean,
     },
-    transactionType: {
-      type: String,
+    dateTime: {
+      type: String | Number,
+    },
+    interest: {
+      type: Number,
     },
   },
   { timestamps: true }
