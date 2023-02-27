@@ -14,7 +14,7 @@ const historySchema = new mongoose.Schema<IQuickSave>(
       type: Boolean,
     },
     dateTime: {
-      type: String | Number,
+      type: String || Number,
     },
     interest: {
       type: Number,
