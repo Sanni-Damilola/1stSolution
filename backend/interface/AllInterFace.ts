@@ -42,5 +42,6 @@ export interface ISaveLock {
 export interface ITargetData {
   amount: number;
   fixedAmount: number;
-  interest: number;
+  dateTime: string;
+  targetValue: string
 } // setting the Object Type for TargetData
