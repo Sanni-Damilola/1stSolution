@@ -17,7 +17,7 @@ export interface IWalletData {
   debit: number;
   quickSave: {}[],
   saveLock: {}[],
-  quickSave: {}[],
+  target: {}[],
 } // setting the Object Type for Wallet
 
 export interface IHistory {
