@@ -35,13 +35,14 @@ export interface IQuickSave {
 
 export interface ISaveLock {
   amount: number;
-  startTime: string;
-  lock: string;
+  interest: number;
+  payBackTime: string;
+  lock: boolean;
 } // setting the Object Type for SaveLock
 
 export interface ITargetData {
   amount: number;
   fixedAmount: number;
   dateTime: string;
-  targetValue: string
+  targetValue: string;
 } // setting the Object Type for TargetData
