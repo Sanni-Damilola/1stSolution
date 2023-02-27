@@ -15,6 +15,9 @@ export interface IWalletData {
   balance: number;
   credit: number;
   debit: number;
+  quickSave: {}[],
+  saveLock: {}[],
+  quickSave: {}[],
 } // setting the Object Type for Wallet
 
 export interface IHistory {
@@ -22,15 +25,6 @@ export interface IHistory {
   transactionRefrence: string;
   transactionType: string;
 } // setting the Object Type for History
-
-
-export interface IHistory {
-  message: string;
-  transactionRefrence: string;
-  transactionType: string;
-} // setting the Object Type for History
-
-
 
 export interface IQuickSave {
   amount: number;
