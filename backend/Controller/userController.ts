@@ -154,6 +154,9 @@ export const getAllUser = async (req: Request, res: Response) => {
 
 export const fundWalletFromBank = async (req: Request, res: Response) => {
   try {
+
+    const getUser = await userModel.findByIdAndUpdate(req.params.id) // get user
+
   } catch (error) {
     return res.status(404).json({
       message: "an error occured in fundWalletFromBank",
