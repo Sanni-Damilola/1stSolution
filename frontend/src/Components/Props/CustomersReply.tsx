@@ -32,6 +32,16 @@ const Container = styled.div`
   justify-content: center;
   border-radius: 5px;
   height: 190px;
+  animation: MoveUpDown 50s linear infinite;
+
+  @keyframes MoveUpDown {
+    from {
+      bottom: 63px;
+    }
+    to {
+      bottom: 400px;
+    }
+  }
   background-color: rgb(249, 249, 249);
 `;
 const Date = styled.span`
@@ -51,7 +61,6 @@ const Image = styled.img`
   border-radius: 50%;
 `;
 const Left = styled.div`
-  background-color: red;
   overflow: hidden;
 `;
 const Name = styled.b`
