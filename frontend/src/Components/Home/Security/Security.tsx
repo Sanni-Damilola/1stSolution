@@ -9,13 +9,13 @@ const Security = () => {
       <Wrapper>
         <Image src={security} />
         <Wrap>
-          <Div>Your security is our priority</Div>
+          <span>Your security is our priority</span>
           <p>
             PiggyVest uses the highest level of Internet Security and it is
             secured by 256 bits SSL <br /> security encryption to ensure that
             your information is comepletely protected from fraud.
           </p>
-          <UnderLineButton />
+          <UnderLineButton hoverColor="" text="Learn more" color="" />
         </Wrap>
       </Wrapper>
     </Container>
@@ -34,15 +34,19 @@ const Image = styled.img`
   margin-right: 30px;
 `;
 const Wrap = styled.div`
-  P {
-    font-size: 16px;
-    font-weight: 600;
+  span {
+    font-weight: bold;
+    font-size: 30px;
   }
-`;
-
-const Div = styled.div`
-  font-weight: bold;
-  font-size: 30px;
+  P {
+    font-family: "DM Sans";
+    vertical-align: baseline;
+    text-decoration: none solid rgb(53, 53, 53);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 27.2px;
+    color: rgb(53, 53, 53);
+  }
 `;
 
 const Container = styled.div`
