@@ -37,6 +37,7 @@ const Container = styled.div<{ boxShadow: string }>`
   z-index: 999;
   top: 0;
   transition: all 650ms;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
