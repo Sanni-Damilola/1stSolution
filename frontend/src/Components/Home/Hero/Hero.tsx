@@ -6,7 +6,8 @@ import heroImage from "../../Image/headerImg.png";
 import investify from "../../Image/investify.png";
 import myRent from "../../Image/rent.png";
 import rect from "../../Image/rect.png";
-import appIcon from "../../Image/apple-icon.svg";
+import appleIcon from "../../Image/apple-icon.svg";
+import googleIcon from "../../Image/google-icon.svg";
 
 const Hero = () => {
   return (
@@ -21,7 +22,18 @@ const Hero = () => {
             goals by helping them save and invest with ease.
           </p>
           <CallToActionButton text="Create free account" padding="18px 20px" />
-          <ButtonLinkToApp image={appIcon} padding="12px 18px" text="" />
+          <ButtonWrapper>
+            <ButtonLinkToApp
+              image={appleIcon}
+              padding="12px 18px"
+              text="Get on iPhone"
+            />
+            <ButtonLinkToApp
+              image={googleIcon}
+              padding="12px 15px"
+              text="Get on Android"
+            />
+          </ButtonWrapper>
         </Right>
         <Left>
           <MyRent src={myRent} />
@@ -33,6 +45,15 @@ const Hero = () => {
     </Container>
   );
 };
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 63%;
+  height: 100px;
+`;
 
 const Right = styled.div`
   width: 50%;

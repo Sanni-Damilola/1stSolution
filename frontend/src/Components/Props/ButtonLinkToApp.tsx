@@ -11,9 +11,7 @@ const ButtonLinkToApp: React.FC<props> = ({ padding, image, text }) => {
   return (
     <Button padding={padding}>
       <Icon src={image} />
-      <Text>
-        {text}
-      </Text>
+      <Text>{text}</Text>
     </Button>
   );
 };
@@ -30,15 +28,15 @@ const Button = styled.div<{ padding: string }>`
   transition: all 360ms;
   color: rgb(12, 24, 37);
   background-color: white;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 500;
   width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  transition: all 650ms;
   :hover {
-    margin-top: -2px;
+    margin-top: -10px;
   }
 `;
 const Icon = styled.img`
