@@ -26,7 +26,9 @@ const Hero = () => {
           <RentWrap>
             <MyRent src={myRent} />
           </RentWrap>
-          <InvestWrap>{/* <Investify src={investify} /> */}</InvestWrap>
+          {/* <InvestWrap>
+          </InvestWrap> */}
+          <Investify src={investify} />
           <Rect src={rect} />
           <Image src={heroImage} />
         </Left>
@@ -65,19 +67,14 @@ const RentWrap = styled.div`
   border-radius: 5px;
   height: 200px;
 `;
-const InvestWrap = styled.div`
-  position: absolute;
-  border-radius: 5px;
-  bottom: 0;
+
+const Investify = styled.img`
+  bottom: 22%;
   z-index: 2;
   width: 150px;
-  height: 58px;
-  right: 0;
-  background-color: red;
-`;
-const Investify = styled.img`
-  width: 100%;
-  height: 100%;
+  height: 100px;
+  right: 60px;
+  position: absolute;
   object-fit: cover;
 `;
 const Rect = styled.img`
