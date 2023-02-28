@@ -16,9 +16,7 @@ const CustomersReply: React.FC<props> = ({ date, image, message, name }) => {
         <Image src={image} />
         <Left>
           <Name>{name}</Name>
-          <Message>
-           {message}
-          </Message>
+          <Message>{message}</Message>
         </Left>
       </Wrapper>
     </Container>
@@ -58,6 +56,7 @@ const Name = styled.b`
 `;
 const Message = styled.p`
   margin: 0;
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: 1px;
   max-width: 380px;
 `;

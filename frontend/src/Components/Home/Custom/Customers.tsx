@@ -35,7 +35,7 @@ const Customers = () => {
           />
           <CustomersReply
             image={micheal}
-            message="Havenue for me to do so. Simple to use, very friendly interface and I just love the fact that they answer my mails immediately. Love the energy!!!"
+            message="I am so happy with this lovely Piggyvest I was able to do many things last year I bought a land I started my house project Did many things!"
             name="Micheal O"
             date="Tuesday, 14th of February 2023 by 09:30 AM"
           />
