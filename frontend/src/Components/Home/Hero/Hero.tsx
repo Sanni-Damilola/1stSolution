@@ -52,20 +52,20 @@ const Image = styled.img`
   left: 2px;
 `;
 const MyRent = styled.img`
-  bottom: 20%;
+  top: 34%;
   z-index: 2;
   width: 150px;
-  height: 100px;
-  right: 60px;
+  height: 120px;
+  left: -60px;
   position: absolute;
   object-fit: cover;
 `;
 
 const Investify = styled.img`
-  bottom: 20%;
+  bottom: 18%;
   z-index: 2;
   width: 150px;
-  height: 100px;
+  height: 110px;
   right: 60px;
   position: absolute;
   object-fit: cover;
