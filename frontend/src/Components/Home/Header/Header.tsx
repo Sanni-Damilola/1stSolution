@@ -34,6 +34,7 @@ const Container = styled.div<{ boxShadow: string }>`
   width: 100%;
   height: 90px;
   position: sticky;
+  z-index: 999;
   top: 0;
   transition: all 650ms;
   display: flex;

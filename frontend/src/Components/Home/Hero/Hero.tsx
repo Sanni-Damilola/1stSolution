@@ -8,11 +8,11 @@ const Hero = () => {
     <Container>
       <Wrapper>
         <Right>
-          <span>The Better Way to Save & Invest.</span>
-          <p>
-            PiggyVest helps over 4 million customers achieve their financial
+          <Text>The Better Way to Save & Invest.</Text>
+          <span>
+            spaniggyVest helps over 4 million customers achieve their financial
             goals by helping them save and invest with ease.
-          </p>
+          </span>
           <CallToActionButton text="Create free account" padding="18px 20px" />
           <ButtonLinkToApp />
         </Right>
@@ -24,8 +24,14 @@ const Hero = () => {
   );
 };
 
-const Right = styled.div``;
-const Left = styled.div``;
+const Right = styled.div`
+  width: 50%;
+`;
+const Left = styled.div`
+  width: 50%;
+  height: 650px;
+  background-color: green;
+`;
 const Image = styled.img``;
 
 export default Hero;
@@ -45,13 +51,6 @@ const Wrapper = styled.div`
   align-items: center;
 
   span {
-    font-size: 55px;
-    font-weight: 700;
-    line-height: 72px;
-    font-family: UB-Bold;
-    color: rgb(12, 24, 37);
-  }
-  p {
     font-family: "DM Sans";
     vertical-align: baseline;
     text-align: center;
@@ -60,4 +59,12 @@ const Wrapper = styled.div`
     line-height: 27.2px;
     color: rgb(53, 53, 53);
   }
+`;
+
+const Text = styled.div`
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 72px;
+  font-family: UB-Bold;
+  color: rgb(12, 24, 37);
 `;
