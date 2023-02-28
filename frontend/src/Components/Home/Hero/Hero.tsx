@@ -65,6 +65,7 @@ const Wrapper = styled.div`
     vertical-align: baseline;
     text-decoration: none solid rgb(53, 53, 53);
     font-weight: 500;
+    font-size: 17px;
     line-height: 27.2px;
     color: rgb(53, 53, 53);
   }

@@ -6,7 +6,7 @@ interface props {
   text: string;
 }
 
-const CallToActionButton: React.FC<props> = ({ padding ,text}) => {
+const CallToActionButton: React.FC<props> = ({ padding, text }) => {
   return <Button padding={padding}>{text}</Button>;
 };
 
@@ -22,6 +22,7 @@ const Button = styled.div<{ padding: string }>`
   padding: ${(props) => props.padding};
   font-style: normal;
   font-weight: 600;
+  width: fit-content;
   font-size: 16.5px;
   cursor: pointer;
   :hover {
