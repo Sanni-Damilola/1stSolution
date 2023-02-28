@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import image from "../../Image/pexels-canva-studio-3194524.jpg";
+import { BsArrowRight } from "react-icons/bs";
 
 const Meet = () => {
   return (
@@ -14,6 +15,12 @@ const Meet = () => {
           confidently by investing in pre-vetted investment <br />{" "}
           opportunities.
         </p>
+        <Button>
+          <Icon>
+            <BsArrowRight />
+          </Icon>
+          <Text>Meet Felicia</Text>
+        </Button>
       </Right>
       <Left src={image} />
     </Container>
@@ -21,6 +28,10 @@ const Meet = () => {
 };
 
 export default Meet;
+
+const Button = styled.div``;
+const Icon = styled.div``;
+const Text = styled.div``;
 
 const Container = styled.div`
   display: flex;
