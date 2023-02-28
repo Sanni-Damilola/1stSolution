@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import ButtonLinkToApp from "../../Props/ButtonLinkToApp";
 import CallToActionButton from "../../Props/CallToActionButton";
+import heroImage from "../../Image/headerImg.png";
+import investify from "../../Image/invest.png"
+import myRent from "../../Image/rent.png"
 
 const Hero = () => {
   return (
@@ -19,7 +22,9 @@ const Hero = () => {
           <ButtonLinkToApp />
         </Right>
         <Left>
-          <Image />
+          <MyRent src={rent} />
+          <Investify />
+          <Image src={heroImage} />
         </Left>
       </Wrapper>
     </Container>
@@ -35,6 +40,8 @@ const Left = styled.div`
   background-color: green;
 `;
 const Image = styled.img``;
+const MyRent = styled.img``;
+const Investify = styled.img``;
 
 export default Hero;
 
