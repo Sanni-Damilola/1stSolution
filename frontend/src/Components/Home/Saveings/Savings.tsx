@@ -1,25 +1,30 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import CallToActionButton from "../../Props/CallToActionButton";
+import SavingsProps from "../../Props/SavingsProps";
 
 const Savings = () => {
   return (
     <Container>
       <Wrapper>
         <Right>
-          <span>Your security is our priority</span>
+          <span>
+            4 ways to build <br /> your savings
+          </span>
           <p>
-            PiggyVest uses the highest level of Internet Security and it is
-            secured by 256 bits SSL <br /> security encryption to ensure that
-            your information is comepletely protected from fraud.
+            Earn 5%-15% when you save with any <br /> of these PiggyVest plans.
           </p>
+          <CallToActionButton padding="10px 13px" text="Start Saving" />
         </Right>
-        <BoxWrapper></BoxWrapper>
+        <BoxWrapper>
+          <SavingsProps />
+        </BoxWrapper>
       </Wrapper>
     </Container>
   );
-}
+};
 
-export default Savings
+export default Savings;
 
 const Right = styled.div`
   span {
@@ -31,12 +36,24 @@ const Right = styled.div`
     vertical-align: baseline;
     text-decoration: none solid rgb(53, 53, 53);
     font-weight: 500;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 27.2px;
     color: rgb(53, 53, 53);
   }
 `;
 
-const Wrapper = styled.div``
-const BoxWrapper = styled.div``
-const Container = styled.div``
+const Wrapper = styled.div`
+  width: 90%;
+`;
+const BoxWrapper = styled.div`
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+`;
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+`;
