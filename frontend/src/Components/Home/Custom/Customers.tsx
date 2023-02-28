@@ -9,7 +9,6 @@ import adebola from "../../Image/adebola.jpeg";
 import olabisi from "../../Image/olabisi.jpeg";
 import micheal from "../../Image/micheal.jpeg";
 import Rachael from "../../Image/Racheal.jpeg";
-import image from "../../Image/adebola.jpeg";
 
 const Customers = () => {
   return (
@@ -33,6 +32,12 @@ const Customers = () => {
             message="Havenue for me to do so. Simple to use, very friendly interface and I just love the fact that they answer my mails immediately. Love the energy!!!"
             name="Adebola P"
             date="Wednesday, 15th of February 2023 by 13:07 PM"
+          />
+          <CustomersReply
+            image={micheal}
+            message="Havenue for me to do so. Simple to use, very friendly interface and I just love the fact that they answer my mails immediately. Love the energy!!!"
+            name="Micheal O"
+            date="Tuesday, 14th of February 2023 by 09:30 AM"
           />
         </Replies>
         <Left>
