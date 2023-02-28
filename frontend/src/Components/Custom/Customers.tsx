@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ButtonLinkToApp from "../Props/ButtonLinkToApp";
 import appleIcon from "../Image/apple-icon.svg";
 import googleIcon from "../Image/google-icon.svg";
+import CallToActionButton from "../Props/CallToActionButton";
 
 const Customers = () => {
   return (
@@ -18,6 +19,7 @@ const Customers = () => {
             confidently by investing in pre-vetted investment <br />{" "}
             opportunities.
           </p>
+          <CallToActionButton padding="10px 13px" text="Start Saving" />
           <ButtonWrapper>
             <ButtonLinkToApp
               image={appleIcon}
