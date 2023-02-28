@@ -42,7 +42,6 @@ const Left = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: green;
   margin-right: 20px;
   position: relative;
 `;
