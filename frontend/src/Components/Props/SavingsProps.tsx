@@ -63,6 +63,7 @@ const Container = styled.div`
   background-color: #f9f9f9;
   padding-left: 30px;
   height: 340px;
+  margin: 30px;
   cursor: pointer;
   span {
     font-weight: bold;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import CallToActionButton from "../../Props/CallToActionButton";
 import SavingsProps from "../../Props/SavingsProps";
 import lock from "../../Image/safelock.png";
+import target from "../../Image/target.png";
 
 const Savings = () => {
   return (
@@ -33,17 +34,17 @@ const Savings = () => {
             image={lock}
           />
           <SavingsProps
-            iconColor=""
-            text1="Automated Savings"
-            text2="Build a dedicated savings faster on your terms automatically or manually."
-            buttonText="Piggybank"
-            image={lock}
+            iconColor="#e4fff1"
+            text1="Goal-oriented Savings"
+            text2="Reach all your savings goals faster. Save towards multiple goals on your own or with a group."
+            buttonText="Target Savings"
+            image={target}
           />
           <SavingsProps
             iconColor=""
             text1="Automated Savings"
             text2="Build a dedicated savings faster on your terms automatically or manually."
-            buttonText="Piggybank"
+            buttonText="Target Savings"
             image={lock}
           />
         </BoxWrapper>
@@ -68,21 +69,22 @@ const Right = styled.div`
     line-height: 27.2px;
     color: rgb(53, 53, 53);
   }
+
+  margin-top: 70px;
 `;
 
 const Wrapper = styled.div`
   width: 90%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 `;
 const BoxWrapper = styled.div`
   flex-wrap: wrap;
   padding-bottom: 10px;
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   width: 70%;
-  background-color: red;
 `;
 
 const Container = styled.div`
