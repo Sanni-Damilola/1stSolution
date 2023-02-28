@@ -38,13 +38,12 @@ const Right = styled.div`
 `;
 const Left = styled.div`
   width: 40%;
-  height: 650px;
+  height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: green;
   margin-right: 20px;
-  margin-top: 20px;
 `;
 const Image = styled.img`
   position: absolute;
