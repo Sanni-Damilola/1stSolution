@@ -1,5 +1,5 @@
 import React from "react";
-import Customers from "../../Custom/Customers";
+import Customers from "../Custom/Customers";
 import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
 import Investify from "../Investify/Investify";
