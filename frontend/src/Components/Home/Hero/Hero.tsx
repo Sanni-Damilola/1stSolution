@@ -70,9 +70,7 @@ const Investify = styled.img`
   position: absolute;
   object-fit: cover;
 `;
-const Rect = styled.img`
-  top: 0;
-`;
+const Rect = styled.img``;
 
 export default Hero;
 
