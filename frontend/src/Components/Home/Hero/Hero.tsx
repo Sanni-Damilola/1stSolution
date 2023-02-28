@@ -8,8 +8,11 @@ const Hero = () => {
     <Container>
       <Wrapper>
         <Right>
-          <h2></h2>
-          <p></p>
+          <span>The Better Way to Save & Invest.</h2>
+          <p>
+            PiggyVest helps over 4 million customers achieve their financial
+            goals by helping them save and invest with ease.
+          </p>
           <CallToActionButton text="Create free account" padding="18px 20px" />
           <ButtonLinkToApp />
         </Right>
