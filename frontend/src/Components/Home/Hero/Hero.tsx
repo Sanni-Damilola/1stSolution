@@ -14,7 +14,7 @@ const Hero = () => {
           <ButtonLinkToApp />
         </Right>
         <Left>
-          <Image></Image>
+          <Image />
         </Left>
       </Wrapper>
     </Container>
