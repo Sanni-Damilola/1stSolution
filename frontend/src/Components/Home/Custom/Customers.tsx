@@ -5,6 +5,10 @@ import appleIcon from "../../Image/apple-icon.svg";
 import googleIcon from "../../Image/google-icon.svg";
 import CallToActionButton from "../../Props/CallToActionButton";
 import CustomersReply from "../../Props/CustomersReply";
+import adebola from "../../Image/adebola.jpeg";
+import olabisi from "../../Image/adebola.jpeg";
+import micheal from "../../Image/adebola.jpeg";
+import image from "../../Image/adebola.jpeg";
 import image from "../../Image/adebola.jpeg";
 
 const Customers = () => {
@@ -12,7 +16,12 @@ const Customers = () => {
     <Container>
       <Wrapper>
         <Replies>
-          <CustomersReply image={image} message="" name="" date="" />
+          <CustomersReply
+            image={olabisi}
+            message=""
+            name="Olabisi A"
+            date="Saturday, 4th of February 2023 by 02:48 AM"
+          />
         </Replies>
         <Left>
           <span>4 Million + customers</span>
