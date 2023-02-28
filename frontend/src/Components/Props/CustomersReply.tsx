@@ -25,16 +25,35 @@ export default CustomersReply;
 
 const Container = styled.div`
   display: flex;
+  width: 460px;
   flex-direction: column;
   justify-content: center;
-  padding-left: 20px;
+  border-radius: 5px;
+  height: 190px;
+  background-color: rgb(249, 249, 249);
 `;
 const Date = styled.span`
   color: rgb(0, 0, 0, 0.5);
-  font-size: 14px;
+  font-size: 13px;
+  text-align: right;
+  margin-right: 24px;
 `;
-const Wrapper = styled.div``;
-const Image = styled.img``;
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+const Image = styled.img`
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+`;
 const Left = styled.div``;
-const Name = styled.b``;
-const Message = styled.p``;
+const Name = styled.b`
+  font-size: 13px;
+`;
+const Message = styled.p`
+  margin: 0;
+  font-size: 13px;
+  max-width: 380px;
+`;

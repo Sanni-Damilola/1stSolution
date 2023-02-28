@@ -71,7 +71,6 @@ const Wrapper = styled.div`
 const Replies = styled.div`
   width: 50%;
   height: 100%;
-  background-color: blue;
 `;
 const Left = styled.div`
   margin-left: 50px;
