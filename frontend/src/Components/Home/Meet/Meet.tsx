@@ -29,14 +29,48 @@ const Meet = () => {
 
 export default Meet;
 
-const Button = styled.div``;
-const Icon = styled.div``;
-const Text = styled.div``;
+const Button = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 500ms;
+
+  background-image: linear-gradient(
+    transparent 0,
+    transparent 70%,
+    rgb(238, 243, 244) 0%,
+    rgb(238, 243, 244) 90%
+  );
+  background-position-x: left;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  cursor: pointer;
+  :hover {
+    background-size: 100% 100%;
+  }
+  width: fit-content;
+`;
+const Icon = styled.div`
+  display: flex;
+  width: 40px;
+  height: 40px;
+  color: blue;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 10px;
+`;
+const Text = styled.div`
+  color: white;
+  font-weight: 600;
+`;
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 `;
 const Right = styled.div`
   width: 60%;
