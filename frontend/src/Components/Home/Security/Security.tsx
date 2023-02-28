@@ -15,7 +15,7 @@ const Security = () => {
             secured by 256 bits SSL <br /> security encryption to ensure that
             your information is comepletely protected from fraud.
           </p>
-          <UnderLineButton hoverColor="" text="Learn more" color="" />
+          <UnderLineButton hoverColor="blue" text="Learn more" color="blue" />
         </Wrap>
       </Wrapper>
     </Container>

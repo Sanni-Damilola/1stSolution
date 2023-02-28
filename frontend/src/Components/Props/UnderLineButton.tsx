@@ -10,7 +10,7 @@ interface props {
 
 const UnderLineButton: React.FC<props> = ({ text, hoverColor, color }) => {
   return (
-    <Button hoverColor={hoverColor}>
+    <Button color={color} hoverColor={hoverColor}>
       {text}
       <Icon color={color}>
         <BiChevronRight />
@@ -31,14 +31,15 @@ const Icon = styled.div<{ color: string }>`
   color: ${(props) => props.color};
 `;
 
-const Button = styled.div<{ hoverColor: string }>`
+const Button = styled.div<{ hoverColor: string; color: string }>`
   display: flex;
   align-items: center;
   cursor: pointer;
-
+  margin-bottom: 400px;
+  color: ${(props) => props.color};
   background-image: linear-gradient(
     transparent 0,
-    transparent 90,
+    transparent 90%,
     ${(props) => props.hoverColor} 90% ${(porps) => porps.hoverColor} 100%
   );
   background-repeat: no-repeat;
