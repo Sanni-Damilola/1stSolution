@@ -8,7 +8,9 @@ const Hero = () => {
     <Container>
       <Wrapper>
         <Right>
-          <span>The Better Way to Save & Invest.</span>
+          <span>
+            The Better Way <br /> to Save & Invest.
+          </span>
           <p>
             PiggyVest helps over 4 million customers achieve their financial
             goals by helping them save and invest with ease.
@@ -51,8 +53,8 @@ const Wrapper = styled.div`
   align-items: center;
 
   span {
-    font-size: 55px;
-    font-weight: 700;
+    font-size: 4.6em;
+    font-weight: 800;
     line-height: 72px;
     font-family: UB-Bold;
     color: rgb(12, 24, 37);
@@ -61,11 +63,9 @@ const Wrapper = styled.div`
   p {
     font-family: "DM Sans";
     vertical-align: baseline;
-    text-align: center;
     text-decoration: none solid rgb(53, 53, 53);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 27.2px;
     color: rgb(53, 53, 53);
   }
 `;
-
