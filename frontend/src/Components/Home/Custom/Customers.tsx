@@ -11,13 +11,11 @@ const Customers = () => {
       <Wrapper>
         <Replies></Replies>
         <Left>
-          <span>
-            Access investment <br /> opportunities
-          </span>
+          <span>4 Million + customers</span>
           <p>
-            Invest securely and confidently on the go. Grow your <br /> money
-            confidently by investing in pre-vetted investment <br />{" "}
-            opportunities.
+            Since launching in 2016, over 4,000,000 people <br /> have used
+            PiggyVest to manage their money better, avoid <br /> over-spending
+            and be more accountable.
           </p>
           <CallToActionButton padding="10px 13px" text="Create free account" />
           <ButtonWrapper>
