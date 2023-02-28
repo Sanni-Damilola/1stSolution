@@ -5,13 +5,14 @@ import appleIcon from "../../Image/apple-icon.svg";
 import googleIcon from "../../Image/google-icon.svg";
 import CallToActionButton from "../../Props/CallToActionButton";
 import CustomersReply from "../../Props/CustomersReply";
+import image from "../../Image/adebola.jpeg";
 
 const Customers = () => {
   return (
     <Container>
       <Wrapper>
         <Replies>
-          <CustomersReply />
+          <CustomersReply image={image} message="" name="" date="" />
         </Replies>
         <Left>
           <span>4 Million + customers</span>

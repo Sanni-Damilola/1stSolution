@@ -1,19 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import image from "../Image/adebola.jpeg";
 
-const CustomersReply = () => {
+interface props {
+  date: string;
+  image: string;
+  name: string;
+  message: string;
+}
+
+const CustomersReply: React.FC<props> = ({ date, image, message, name }) => {
   return (
     <Container>
-      <Date>hursday, 27th of October 2022 by 13:03 PM </Date>
+      <Date>{date}</Date>
       <Wrapper>
         <Image src={image} />
         <Left>
-          <Name>Adebola P</Name>
+          <Name>{name}</Name>
           <Message>
-            avenue for me to do so. Simple to use, very friendly interface and I
-            just love the fact that they answer my mails immediately. Love the
-            energy!!!
+           {message}
           </Message>
         </Left>
       </Wrapper>
