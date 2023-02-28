@@ -42,11 +42,11 @@ const Icon = styled.div<{ color: string }>`
   display: flex;
   width: 40px;
   height: 40px;
-  color: ${(props) => props.color};
+  color: blue;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: rgb(227, 245, 255);
+  background-color: ${(props) => props.color};
 `;
 const Text = styled.div`
   color: rgb(53, 53, 53);

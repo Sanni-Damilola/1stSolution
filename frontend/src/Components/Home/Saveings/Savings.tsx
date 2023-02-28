@@ -29,7 +29,7 @@ const Savings = () => {
             image={piggy}
           />
           <SavingsProps
-            iconColor=""
+            iconColor="rgb(227,245,255)"
             text1="Fixed Savings"
             text2="Lock money away for a fixed duration with no access to it until maturity. It’s like having a custom fixed deposit."
             buttonText="Safelock"
