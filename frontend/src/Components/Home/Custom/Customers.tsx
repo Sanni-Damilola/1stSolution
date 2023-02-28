@@ -14,32 +14,35 @@ const Customers = () => {
   return (
     <Container>
       <Wrapper>
-        <Replies>
-          <CustomersReply
-            image={olabisi}
-            message="Hello Piggy users, I’m Ola and more than elated to let you know that for the first time in my existence I’m able to save over 200k because I used the piggy safelock. Growing up in the rural parts of Lagos is one thing, steadily working to bring myself out is another thing. I was able to make not only first hundred but my second with piggyvest. You can do it too! Cheers😊😊"
-            name="Olabisi A"
-            date="Saturday, 4th of February 2023 by 02:48 AM"
-          />
-          <CustomersReply
-            image={Rachael}
-            message="My name is Rachael Joseph and I am here to testify that Piggyvest has helped me a lot. I had to spread the good news to my friends and tell them about the app and behold they are also using it. Thank you so much Pggyvest for saving me cause I am the type of person that spends lavishly. Thank you once again Piggyvest 💙"
-            name="Rachael O"
-            date="Saturday, 4th of February 2023 by 02:48 AM"
-          />
-          <CustomersReply
-            image={adebola}
-            message="Havenue for me to do so. Simple to use, very friendly interface and I just love the fact that they answer my mails immediately. Love the energy!!!"
-            name="Adebola P"
-            date="Wednesday, 15th of February 2023 by 13:07 PM"
-          />
-          <CustomersReply
-            image={micheal}
-            message="I am so happy with this lovely Piggyvest I was able to do many things last year I bought a land I started my house project Did many things!"
-            name="Micheal O"
-            date="Tuesday, 14th of February 2023 by 09:30 AM"
-          />
-        </Replies>
+        <Right>
+          <Replies>
+            <CustomersReply
+              image={olabisi}
+              message="Hello Piggy users, I’m Ola and more than elated to let you know that for the first time in my existence I’m able to save over 200k because I used the piggy safelock. Growing up in the rural parts of Lagos is one thing, steadily working to bring myself out is another thing. I was able to make not only first hundred but my second with piggyvest. You can do it too! Cheers😊😊"
+              name="Olabisi A"
+              date="Saturday, 4th of February 2023 by 02:48 AM"
+            />
+            <CustomersReply
+              image={Rachael}
+              message="My name is Rachael Joseph and I am here to testify that Piggyvest has helped me a lot. I had to spread the good news to my friends and tell them about the app and behold they are also using it. Thank you so much Pggyvest for saving me cause I am the type of person that spends lavishly. Thank you once again Piggyvest 💙"
+              name="Rachael O"
+              date="Saturday, 4th of February 2023 by 02:48 AM"
+            />
+            <CustomersReply
+              image={adebola}
+              message="Havenue for me to do so. Simple to use, very friendly interface and I just love the fact that they answer my mails immediately. Love the energy!!!"
+              name="Adebola P"
+              date="Wednesday, 15th of February 2023 by 13:07 PM"
+            />
+            <CustomersReply
+              image={micheal}
+              message="I am so happy with this lovely Piggyvest I was able to do many things last year I bought a land I started my house project Did many things!"
+              name="Micheal O"
+              date="Tuesday, 14th of February 2023 by 09:30 AM"
+            />
+          </Replies>
+        </Right>
+
         <Left>
           <span>4 Million + customers</span>
           <p>
@@ -72,6 +75,16 @@ const Customers = () => {
 
 export default Customers;
 
+const Right = styled.div`
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+`;
+
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -96,8 +109,19 @@ const Wrapper = styled.div`
   height: 100%;
 `;
 const Replies = styled.div`
-  width: 50%;
+  width: 100%;
   height: 100%;
+  position: absolute;
+  animation: MoveUpDown 10s none infinite;
+  transition: all 500ms;
+  @keyframes MoveUpDown {
+    from {
+      bottom: 63px;
+    }
+    to {
+      bottom: 400px;
+    }
+  }
 `;
 const Left = styled.div`
   margin-left: 50px;
