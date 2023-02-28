@@ -23,8 +23,10 @@ const Hero = () => {
           <ButtonLinkToApp />
         </Right>
         <Left>
-          <MyRent src={myRent} />
-          <Investify src={investify} />
+          <RentWrap>
+            <MyRent src={myRent} />
+          </RentWrap>
+          <InvestWrap>{/* <Investify src={investify} /> */}</InvestWrap>
           <Rect src={rect} />
           <Image src={heroImage} />
         </Left>
@@ -44,27 +46,41 @@ const Left = styled.div`
   align-items: center;
   background-color: green;
   margin-right: 20px;
+  position: relative;
 `;
 const Image = styled.img`
   position: absolute;
+  z-index: 1;
+  left: 2px;
 `;
 const MyRent = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+const RentWrap = styled.div`
   position: absolute;
   top: 0;
-  object-fit: cover;
+  width: 200px;
+  border-radius: 5px;
+  height: 200px;
+`;
+const InvestWrap = styled.div`
+  position: absolute;
+  border-radius: 5px;
+  bottom: 0;
+  z-index: 2;
+  width: 150px;
+  height: 58px;
+  right: 0;
+  background-color: red;
 `;
 const Investify = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  position: absolute;
-  top: 0;
 `;
 const Rect = styled.img`
-  position: relative;
-
   top: 0;
 `;
 
