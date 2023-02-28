@@ -6,9 +6,9 @@ import googleIcon from "../../Image/google-icon.svg";
 import CallToActionButton from "../../Props/CallToActionButton";
 import CustomersReply from "../../Props/CustomersReply";
 import adebola from "../../Image/adebola.jpeg";
-import olabisi from "../../Image/adebola.jpeg";
-import micheal from "../../Image/adebola.jpeg";
-import image from "../../Image/adebola.jpeg";
+import olabisi from "../../Image/olabisi.jpeg";
+import micheal from "../../Image/micheal.jpeg";
+import Rachael from "../../Image/Reacheal.jpeg";
 import image from "../../Image/adebola.jpeg";
 
 const Customers = () => {
@@ -18,7 +18,19 @@ const Customers = () => {
         <Replies>
           <CustomersReply
             image={olabisi}
-            message=""
+            message="Hello Piggy users, I’m Ola and more than elated to let you know that for the first time in my existence I’m able to save over 200k because I used the piggy safelock. Growing up in the rural parts of Lagos is one thing, steadily working to bring myself out is another thing. I was able to make not only first hundred but my second with piggyvest. You can do it too! Cheers😊😊"
+            name="Olabisi A"
+            date="Saturday, 4th of February 2023 by 02:48 AM"
+          />
+          <CustomersReply
+            image={Rachael}
+            message="My name is Rachael Joseph and I am here to testify that Piggyvest has helped me a lot. I had to spread the good news to my friends and tell them about the app and behold they are also using it. Thank you so much Pggyvest for saving me cause I am the type of person that spends lavishly. Thank you once again Piggyvest 💙"
+            name="Olabisi A"
+            date="Saturday, 4th of February 2023 by 02:48 AM"
+          />
+          <CustomersReply
+            image={olabisi}
+            message="Hello Piggy users, I’m Ola and more than elated to let you know that for the first time in my existence I’m able to save over 200k because I used the piggy safelock. Growing up in the rural parts of Lagos is one thing, steadily working to bring myself out is another thing. I was able to make not only first hundred but my second with piggyvest. You can do it too! Cheers😊😊"
             name="Olabisi A"
             date="Saturday, 4th of February 2023 by 02:48 AM"
           />
