@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Constomers = () => {
+const Customers = () => {
   return (
     <Container>
       <Replies></Replies>
@@ -11,7 +11,7 @@ const Constomers = () => {
   );
 };
 
-export default Constomers;
+export default Customers;
 
 const Container = styled.div`
   display: flex;
