@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import CallToActionButton from "../../Props/CallToActionButton";
 import SavingsProps from "../../Props/SavingsProps";
+import lock from "../Image/safelock.png";
 
 const Savings = () => {
   return (
@@ -17,7 +18,7 @@ const Savings = () => {
           <CallToActionButton padding="10px 13px" text="Start Saving" />
         </Right>
         <BoxWrapper>
-          <SavingsProps />
+          <SavingsProps iconColor="" text1="" />
         </BoxWrapper>
       </Wrapper>
     </Container>

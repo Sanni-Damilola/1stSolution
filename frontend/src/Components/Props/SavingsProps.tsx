@@ -1,36 +1,32 @@
 import React from "react";
 import styled from "styled-components";
-import lock from "../Image/safelock.png";
 import { BsArrowRight } from "react-icons/bs";
 
 interface props {
   text1: string;
   text2: string;
   iconColor: string;
-  buttoText: string;
-  image;
+  buttonText: string;
+  image: string;
 }
 
 const SavingsProps: React.FC<props> = ({
   text1,
   text2,
   iconColor,
-  buttoText,
+  buttonText,
   image,
 }) => {
   return (
     <Container>
       <Image src={image} />
-      <span></span>
-      <p>
-        Build a dedicated savings faster on your terms automatically or
-        manually.
-      </p>
+      <span>{text1}</span>
+      <p>{text2}</p>
       <nav>
-        <Icon>
+        <Icon iconColor={iconColor}>
           <BsArrowRight />
         </Icon>
-        <Text>piggybank</Text>
+        <Text>{buttonText}</Text>
       </nav>
     </Container>
   );
@@ -42,11 +38,11 @@ const Image = styled.img`
   width: 50px;
   margin-bottom: 20px;
 `;
-const Icon = styled.div`
+const Icon = styled.div<{ color: string }>`
   display: flex;
   width: 40px;
   height: 40px;
-  color: blue;
+  color: ${(props) => props.color};
   justify-content: center;
   align-items: center;
   border-radius: 50%;
