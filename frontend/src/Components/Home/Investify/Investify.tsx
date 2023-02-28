@@ -1,21 +1,20 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const Investify = () => {
   return (
-    <div>
+    <Container>
       <Image />
       <Left>
         <Texts></Texts>
-
       </Left>
-    </div>
-  )
-}
+    </Container>
+  );
+};
 
-export default Investify
+export default Investify;
 
-const Container = styled.div``
-const Image = styled.img``
-const Left = styled.div``
-const Texts = styled.div``
+const Container = styled.div``;
+const Image = styled.img``;
+const Left = styled.div``;
+const Texts = styled.div``;
