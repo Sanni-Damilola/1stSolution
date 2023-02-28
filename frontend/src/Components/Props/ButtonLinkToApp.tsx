@@ -5,11 +5,23 @@ interface props {
   padding: string;
   image: string;
   text: string;
+  HoverBorderValue: string;
+  marginTopValue: string;
 }
 
-const ButtonLinkToApp: React.FC<props> = ({ padding, image, text }) => {
+const ButtonLinkToApp: React.FC<props> = ({
+  padding,
+  image,
+  text,
+  HoverBorderValue,
+  marginTopValue,
+}) => {
   return (
-    <Button padding={padding}>
+    <Button
+      border={HoverBorderValue}
+      marginTop={marginTopValue}
+      padding={padding}
+    >
       <Icon src={image} />
       <Text>{text}</Text>
     </Button>
@@ -18,7 +30,11 @@ const ButtonLinkToApp: React.FC<props> = ({ padding, image, text }) => {
 
 export default ButtonLinkToApp;
 
-const Button = styled.div<{ padding: string }>`
+const Button = styled.div<{
+  padding: string;
+  marginTop: string;
+  border: string;
+}>`
   padding: ${(props) => props.padding};
   border: 1px solid rgb(0, 0, 0, 0.2);
   outline: none;
@@ -36,7 +52,8 @@ const Button = styled.div<{ padding: string }>`
   align-items: center;
   transition: all 500ms;
   :hover {
-    margin-top: -10px;
+    margin-top: ${({ marginTop }) => (marginTop ? "-10px" : "")};
+    border: ${({ border }) => (border ? "1px" : "0")} solid rgb(0, 0, 0, 0.2);
   }
 `;
 const Icon = styled.img`

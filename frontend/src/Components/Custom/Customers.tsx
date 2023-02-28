@@ -19,14 +19,18 @@ const Customers = () => {
             confidently by investing in pre-vetted investment <br />{" "}
             opportunities.
           </p>
-          <CallToActionButton padding="10px 13px" text="Start Saving" />
+          <CallToActionButton padding="10px 13px" text="Create free account" />
           <ButtonWrapper>
             <ButtonLinkToApp
               image={appleIcon}
               padding="12px 18px"
               text="Get on iPhone"
+              marginTopValue=""
+              HoverBorderValue="value"
             />
             <ButtonLinkToApp
+              marginTopValue=""
+              HoverBorderValue="value"
               image={googleIcon}
               padding="12px 15px"
               text="Get on Android"

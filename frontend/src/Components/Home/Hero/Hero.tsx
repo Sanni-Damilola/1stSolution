@@ -26,9 +26,13 @@ const Hero = () => {
             <ButtonLinkToApp
               image={appleIcon}
               padding="12px 18px"
+              marginTopValue="value"
+              HoverBorderValue=""
               text="Get on iPhone"
             />
             <ButtonLinkToApp
+              marginTopValue="value"
+              HoverBorderValue=""
               image={googleIcon}
               padding="12px 15px"
               text="Get on Android"
