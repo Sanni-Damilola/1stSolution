@@ -30,7 +30,7 @@ const Icon = styled.div<{ color: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3px;
+  margin-bottom: 3px;
   margin-left: 3px;
   font-weight: 500;
   font-size: 17px;
