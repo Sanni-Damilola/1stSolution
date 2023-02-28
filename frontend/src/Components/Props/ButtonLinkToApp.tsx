@@ -1,24 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import appIcon from "../Image/apple-icon.svg";
 
 interface props {
-  text: string;
+  padding: string;
   image: string;
+  text: string;
 }
 
-const ButtonLinkToApp: React.FC<props. = ({ padding, image }) => {
+const ButtonLinkToApp: React.FC<props> = ({ padding, image, text }) => {
   return (
     <Button padding={padding}>
-      <Icon src={appIcon} />
-      <Text>Get on iPhone</Text>
+      <Icon src={image} />
+      <Text>
+        {text}
+      </Text>
     </Button>
   );
 };
 
 export default ButtonLinkToApp;
 
-const Button = styled.div<{ padding }>`
+const Button = styled.div<{ padding: string }>`
   padding: ${(props) => props.padding};
   border: 1px solid rgb(0, 0, 0, 0.2);
   outline: none;

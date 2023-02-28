@@ -6,6 +6,7 @@ import heroImage from "../../Image/headerImg.png";
 import investify from "../../Image/investify.png";
 import myRent from "../../Image/rent.png";
 import rect from "../../Image/rect.png";
+import appIcon from "../../Image/apple-icon.svg";
 
 const Hero = () => {
   return (
@@ -20,7 +21,7 @@ const Hero = () => {
             goals by helping them save and invest with ease.
           </p>
           <CallToActionButton text="Create free account" padding="18px 20px" />
-          <ButtonLinkToApp />
+          <ButtonLinkToApp image={appIcon} padding="12px 18px" text="" />
         </Right>
         <Left>
           <MyRent src={myRent} />
