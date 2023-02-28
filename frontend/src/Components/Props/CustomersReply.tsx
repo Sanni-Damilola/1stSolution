@@ -50,7 +50,10 @@ const Image = styled.img`
   margin-right: 10px;
   border-radius: 50%;
 `;
-const Left = styled.div``;
+const Left = styled.div`
+  background-color: red;
+  overflow: hidden;
+`;
 const Name = styled.b`
   font-size: 13px;
 `;
