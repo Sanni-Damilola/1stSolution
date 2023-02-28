@@ -22,15 +22,37 @@ const Meet = () => {
 
 export default Meet;
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const Right = styled.div`
   width: 60%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: rgb(13, 96, 216);
-  height: 400px;
+  height: 500px;
+  padding-left: 100px;
+  span {
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+  }
+  P {
+    font-family: "DM Sans";
+    vertical-align: baseline;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27.2px;
+    color: white;
+  }
 `;
 const Left = styled.img`
-  width: 40%;
-  height: 100%;
+  width: 50%;
+  height: 500px;
   object-fit: cover;
+  text-decoration: none solid rgb(53, 53, 53);
 `;
