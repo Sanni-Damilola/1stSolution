@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import ButtonLinkToApp from "../../Props/ButtonLinkToApp";
-import appleIcon from "../Image/apple-icon.svg";
-import googleIcon from "../Image/google-icon.svg";
+import appleIcon from "../../Image/apple-icon.svg";
+import googleIcon from "../../Image/google-icon.svg";
 import CallToActionButton from "../../Props/CallToActionButton";
 
 const Customers = () => {
