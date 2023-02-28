@@ -36,7 +36,7 @@ const Button = styled.div<{
   border: string;
 }>`
   padding: ${(props) => props.padding};
-  border: 1px solid rgb(0, 0, 0, 0.2);
+  border: 1px solid rgb(0, 0, 0, 0.1);
   outline: none;
   cursor: pointer;
   margin-right: 10px;
