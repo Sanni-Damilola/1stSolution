@@ -3,8 +3,9 @@ import styled from "styled-components";
 import ButtonLinkToApp from "../../Props/ButtonLinkToApp";
 import CallToActionButton from "../../Props/CallToActionButton";
 import heroImage from "../../Image/headerImg.png";
-import investify from "../../Image/invest.png"
-import myRent from "../../Image/rent.png"
+import investify from "../../Image/investify.png";
+import myRent from "../../Image/rent.png";
+import rect from "../../Image/rect.png";
 
 const Hero = () => {
   return (
@@ -22,8 +23,9 @@ const Hero = () => {
           <ButtonLinkToApp />
         </Right>
         <Left>
-          <MyRent src={rent} />
-          <Investify />
+          <MyRent src={myRent} />
+          <Investify src={investify} />
+          <Rect src={rect} />
           <Image src={heroImage} />
         </Left>
       </Wrapper>
@@ -37,11 +39,35 @@ const Right = styled.div`
 const Left = styled.div`
   width: 40%;
   height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: green;
+  margin-right: 20px;
+  margin-top: 20px;
 `;
-const Image = styled.img``;
-const MyRent = styled.img``;
-const Investify = styled.img``;
+const Image = styled.img`
+  position: absolute;
+`;
+const MyRent = styled.img`
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+`;
+const Investify = styled.img`
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+`;
+const Rect = styled.img`
+  position: relative;
+
+  top: 0;
+`;
 
 export default Hero;
 
