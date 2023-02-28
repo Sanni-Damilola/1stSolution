@@ -18,7 +18,34 @@ const Savings = () => {
           <CallToActionButton padding="10px 13px" text="Start Saving" />
         </Right>
         <BoxWrapper>
-          <SavingsProps iconColor="" text1="" />
+          <SavingsProps
+            iconColor=""
+            text1="Automated Savings"
+            text2="Build a dedicated savings faster on your terms automatically or manually."
+            buttonText="Piggybank"
+            image={lock}
+          />
+          <SavingsProps
+            iconColor=""
+            text1="Automated Savings"
+            text2="Build a dedicated savings faster on your terms automatically or manually."
+            buttonText="Piggybank"
+            image={lock}
+          />
+          <SavingsProps
+            iconColor=""
+            text1="Automated Savings"
+            text2="Build a dedicated savings faster on your terms automatically or manually."
+            buttonText="Piggybank"
+            image={lock}
+          />
+          <SavingsProps
+            iconColor=""
+            text1="Automated Savings"
+            text2="Build a dedicated savings faster on your terms automatically or manually."
+            buttonText="Piggybank"
+            image={lock}
+          />
         </BoxWrapper>
       </Wrapper>
     </Container>

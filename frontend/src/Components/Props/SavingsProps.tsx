@@ -23,7 +23,7 @@ const SavingsProps: React.FC<props> = ({
       <span>{text1}</span>
       <p>{text2}</p>
       <nav>
-        <Icon iconColor={iconColor}>
+        <Icon color={iconColor}>
           <BsArrowRight />
         </Icon>
         <Text>{buttonText}</Text>
