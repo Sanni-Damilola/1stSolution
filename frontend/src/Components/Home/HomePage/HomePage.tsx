@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
+import Savings from "../Saveings/Savings";
 import Security from "../Security/Security";
 
 const HomePage = () => {
@@ -9,6 +10,7 @@ const HomePage = () => {
       <Header />
       <Hero />
       <Security />
+      <Savings />
     </div>
   );
 };
