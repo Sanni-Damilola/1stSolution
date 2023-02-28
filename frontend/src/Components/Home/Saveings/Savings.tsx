@@ -44,13 +44,19 @@ const Right = styled.div`
 
 const Wrapper = styled.div`
   width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 const BoxWrapper = styled.div`
   flex-wrap: wrap;
   padding-bottom: 10px;
   display: flex;
   align-items: center;
+  width: 70%;
+  background-color: red;
 `;
+
 const Container = styled.div`
   display: flex;
   justify-content: center;

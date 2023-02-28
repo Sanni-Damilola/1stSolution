@@ -34,7 +34,7 @@ const Button = styled.div<{ padding: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 650ms;
+  transition: all 500ms;
   :hover {
     margin-top: -10px;
   }
