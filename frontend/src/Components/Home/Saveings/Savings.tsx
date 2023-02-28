@@ -4,6 +4,8 @@ import CallToActionButton from "../../Props/CallToActionButton";
 import SavingsProps from "../../Props/SavingsProps";
 import lock from "../../Image/safelock.png";
 import target from "../../Image/target.png";
+import flex from "../../Image/flex.png";
+import piggy from "../../Image/piggy.png";
 
 const Savings = () => {
   return (
@@ -20,17 +22,17 @@ const Savings = () => {
         </Right>
         <BoxWrapper>
           <SavingsProps
-            iconColor=""
+            iconColor="rgb(224,239,255)"
             text1="Automated Savings"
             text2="Build a dedicated savings faster on your terms automatically or manually."
             buttonText="Piggybank"
-            image={lock}
+            image={piggy}
           />
           <SavingsProps
             iconColor=""
-            text1="Automated Savings"
-            text2="Build a dedicated savings faster on your terms automatically or manually."
-            buttonText="Piggybank"
+            text1="Fixed Savings"
+            text2="Lock money away for a fixed duration with no access to it until maturity. It’s like having a custom fixed deposit."
+            buttonText="Safelock"
             image={lock}
           />
           <SavingsProps
@@ -41,11 +43,11 @@ const Savings = () => {
             image={target}
           />
           <SavingsProps
-            iconColor=""
-            text1="Automated Savings"
-            text2="Build a dedicated savings faster on your terms automatically or manually."
-            buttonText="Target Savings"
-            image={lock}
+            iconColor="rgb(253,231,245)"
+            text1="Flexible Savings"
+            text2="Save, transfer, withdraw, manage and organise your money for free at any time."
+            buttonText="Flex Naira"
+            image={flex}
           />
         </BoxWrapper>
       </Wrapper>
