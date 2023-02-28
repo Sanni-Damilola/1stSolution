@@ -51,7 +51,7 @@ const ButtonWrapper = styled.div`
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  width: 63%;
+  width: fit-content;
   height: 100px;
 `;
 

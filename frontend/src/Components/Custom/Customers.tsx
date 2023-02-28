@@ -10,6 +10,14 @@ const Customers = () => {
       <Wrapper>
         <Replies></Replies>
         <Left>
+          <span>
+            Access investment <br /> opportunities
+          </span>
+          <p>
+            Invest securely and confidently on the go. Grow your <br /> money
+            confidently by investing in pre-vetted investment <br />{" "}
+            opportunities.
+          </p>
           <ButtonWrapper>
             <ButtonLinkToApp
               image={appleIcon}
@@ -35,7 +43,7 @@ const ButtonWrapper = styled.div`
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  width: 63%;
+  width: fit-content;
   height: 100px;
 `;
 
@@ -45,7 +53,6 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 500px;
-  background-color: red;
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -53,7 +60,24 @@ const Wrapper = styled.div`
   align-items: center;
   width: 80%;
 `;
-const Replies = styled.div``;
+const Replies = styled.div`
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+`;
 const Left = styled.div`
   margin-left: 50px;
+  span {
+    font-weight: bold;
+    font-size: 50px;
+  }
+  P {
+    font-family: "DM Sans";
+    vertical-align: baseline;
+    text-decoration: none solid rgb(53, 53, 53);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27.2px;
+    color: rgb(53, 53, 53);
+  }
 `;
