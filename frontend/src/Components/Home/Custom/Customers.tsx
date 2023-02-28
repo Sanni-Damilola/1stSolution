@@ -4,12 +4,15 @@ import ButtonLinkToApp from "../../Props/ButtonLinkToApp";
 import appleIcon from "../../Image/apple-icon.svg";
 import googleIcon from "../../Image/google-icon.svg";
 import CallToActionButton from "../../Props/CallToActionButton";
+import CustomersReply from "../../Props/CustomersReply";
 
 const Customers = () => {
   return (
     <Container>
       <Wrapper>
-        <Replies></Replies>
+        <Replies>
+          <CustomersReply />
+        </Replies>
         <Left>
           <span>4 Million + customers</span>
           <p>
@@ -63,6 +66,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 80%;
+  height: 100%;
 `;
 const Replies = styled.div`
   width: 50%;
