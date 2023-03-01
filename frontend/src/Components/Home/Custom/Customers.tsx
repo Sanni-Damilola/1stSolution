@@ -114,7 +114,7 @@ const Replies = styled.div`
   position: absolute;
   bottom: 0;
   transition: all 500ms;
-  animation: MoveAndUpDown 9s normal infinite;
+  animation: MoveAndUpDown 9s normal infinite; // 👇 animation for message to automatically move up and dowm
   @keyframes MoveAndUpDown {
     from {
       bottom: 63px;
