@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import investify from "../../Image/invest.png";
-import UnderLineButton from "../../Props/UnderLineButton";
+import UnderLineButton from "../../Global/UnderLineButton";
 
 const Investify = () => {
   return (

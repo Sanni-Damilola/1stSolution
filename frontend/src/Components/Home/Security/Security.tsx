@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import UnderLineButton from "../../Props/UnderLineButton";
+import UnderLineButton from "../../Global/UnderLineButton";
 import security from "../../Image/security.png";
 
 const Security = () => {
