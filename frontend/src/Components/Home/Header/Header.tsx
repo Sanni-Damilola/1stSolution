@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../Image/logo.svg";
 
@@ -20,8 +21,12 @@ const Header = () => {
       <Wrapper>
         <Logo src={logo} />
         <ButtonWrapper>
-          <SignIn>Sign in</SignIn>
-          <SignUp>Create free account</SignUp>
+          <Link to={"/signIn"}>
+            <SignIn>Sign in</SignIn>
+          </Link>
+          <Link to={"/signUp"}>
+            <SignUp>Create free account</SignUp>
+          </Link>
         </ButtonWrapper>
       </Wrapper>
     </Container>
