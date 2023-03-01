@@ -14,6 +14,30 @@ const SignUp = () => {
             <span>Full Name</span>
             <Input type={"email"} placeholder="Full Name" />
           </InputWrap>
+          <InputWrap>
+            <span>Full Name</span>
+            <Input type={"email"} placeholder="Full Name" />
+          </InputWrap>
+          <InputWrap>
+            <span>Full Name</span>
+            <Input type={"email"} placeholder="Full Name" />
+          </InputWrap>
+          <InputWrap>
+            <span>Full Name</span>
+            <Input type={"email"} placeholder="Full Name" />
+          </InputWrap>
+          <InputWrap>
+            <span>Full Name</span>
+            <Input type={"email"} placeholder="Full Name" />
+          </InputWrap>
+          <InputWrap>
+            <span>Full Name</span>
+            <Input type={"email"} placeholder="Full Name" />
+          </InputWrap>
+          <InputWrap>
+            <span>Full Name</span>
+            <Input type={"email"} placeholder="Full Name" />
+          </InputWrap>
         </Wrapper>
       </Card>
     </Container>
@@ -28,15 +52,17 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: rgb(6, 40, 99);
-  height: 800px;
+  padding-bottom: 20px;
 `;
 const Logo = styled.img`
   height: 33px;
+  margin-top: 70px;
 `;
 const Wrapper = styled.div`
   display: flex;
+  margin-top: 50px;
   background-color: white;
-  height: 80%;
+  padding-bottom: 20px;
   border-radius: 30px 30px 30px 0px;
   width: 70%;
   justify-content: center;
@@ -50,9 +76,10 @@ const Wrapper = styled.div`
   }
   span {
     color: rgb(74, 85, 104);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     text-align: start;
+
   }
   p {
     color: rgb(74, 85, 104);
@@ -64,6 +91,7 @@ const Wrapper = styled.div`
 const InputWrap = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
 `;
 const Input = styled.input`
   width: 350px;
@@ -82,7 +110,7 @@ const Input = styled.input`
 const Card = styled.div`
   display: flex;
   width: 100%;
-  height: 80%;
+  padding-bottom: 20px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
