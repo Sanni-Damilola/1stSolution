@@ -67,13 +67,17 @@ const InputWrap = styled.div`
 `;
 const Input = styled.input`
   width: 350px;
-  height: 40px;
+  height: 55px;
   margin-top: 10px;
   background-color: #edf2f7;
   outline: none;
   border: 0;
   border-radius: 5px;
   padding-left: 10px;
+
+  ::placeholder {
+    color: rgb(0, 0, 0, 0.3);
+  }
 `;
 const Card = styled.div`
   display: flex;
