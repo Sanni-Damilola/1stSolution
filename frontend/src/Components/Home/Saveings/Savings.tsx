@@ -76,7 +76,7 @@ const Right = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 90%;
+  width: 87%;
   display: flex;
   justify-content: space-between;
 `;
