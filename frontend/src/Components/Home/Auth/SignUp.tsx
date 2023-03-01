@@ -64,9 +64,15 @@ const Wrapper = styled.div`
 const InputWrap = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;
-const Input = styled.input``;
+const Input = styled.input`
+  width: 400px;
+  height: 40px;
+  background-color: #edf2f7;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+`;
 const Card = styled.div`
   display: flex;
   width: 100%;
