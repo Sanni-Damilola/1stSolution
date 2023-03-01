@@ -113,9 +113,9 @@ const Replies = styled.div`
   height: 100%;
   position: absolute;
   bottom: 0;
-  animation: MoveUpDown 9s normal infinite;
   transition: all 500ms;
-  @keyframes MoveUpDown {
+  animation: MoveAndUpDown 9s normal infinite;
+  @keyframes MoveAndUpDown {
     from {
       bottom: 63px;
     }
