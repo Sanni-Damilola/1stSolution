@@ -75,8 +75,9 @@ const Power = styled.div`
 
 const Socials = styled.div`
   font-size: 30px;
-  cursor: ponter;
-  background-color: red;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
 `;
 
 const About = styled.div`
