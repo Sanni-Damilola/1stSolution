@@ -12,7 +12,7 @@ const SignUp = () => {
           <p>Welcome to the future of Savings & Investments</p>
           <InputWrap>
             <span>Full Name</span>
-            <Input />
+            <Input type={"email"} placeholder="Full Name" />
           </InputWrap>
         </Wrapper>
       </Card>
@@ -66,12 +66,14 @@ const InputWrap = styled.div`
   flex-direction: column;
 `;
 const Input = styled.input`
-  width: 400px;
+  width: 350px;
   height: 40px;
+  margin-top: 10px;
   background-color: #edf2f7;
   outline: none;
   border: 0;
   border-radius: 5px;
+  padding-left: 10px;
 `;
 const Card = styled.div`
   display: flex;
