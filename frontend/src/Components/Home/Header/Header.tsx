@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../../Image/logo.svg";
+import logo from "../../Image/headerLogo.svg";
 
 const Header = () => {
   const [show, setShow] = React.useState(false);
@@ -19,7 +19,9 @@ const Header = () => {
   return (
     <Container boxShadow={show ? "value" : ""}>
       <Wrapper>
-        <Logo src={logo} />
+        <Link style={{ textDecoration: "none" }} to={"/"}>
+          <Logo src={logo} />
+        </Link>
         <ButtonWrapper>
           <Link to={"/signIn"}>
             <SignIn>Sign in</SignIn>

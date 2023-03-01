@@ -7,7 +7,9 @@ const SignUp = () => {
   return (
     <Container>
       <Card>
-        <Logo src={logo} />
+        <Link style={{ textDecoration: "none" }} to={"/"}>
+          <Logo src={logo} />
+        </Link>
         <Wrapper>
           <h2>Create a Secure Account</h2>
           <p>Welcome to the future of Savings & Investments</p>

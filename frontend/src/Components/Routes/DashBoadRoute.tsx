@@ -1,7 +1,15 @@
-import React from 'react'
+import React from "react";
+import { useRoutes } from "react-router-dom";
+import DashBoard from "../DashBoard/DashBoard";
 
 const DashBoadRoute = () => {
-  return <div>DashBoadRoute DashBoadRoute</div>;
-}
+  const element = useRoutes([
+    {
+      path: "/dashBoard",
+      element: <DashBoard />,
+    },
+  ]);
+  return element;
+};
 
-export default DashBoadRoute
+export default DashBoadRoute;

@@ -3,24 +3,27 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../Image/logo.svg";
 
-
 const SignIn = () => {
   return (
     <Container>
       <Card>
-        <Logo src={logo} />
+        <Link style={{ textDecoration: "none" }} to={"/"}>
+          <Logo src={logo} />
+        </Link>
         <Wrapper>
           <h2>Create a Secure Account</h2>
           <p>Welcome to the future of Savings & Investments</p>
           <InputWrap>
             <span>Email Or Phone Number</span>
-            <Input type={"text"}  />
+            <Input type={"text"} />
           </InputWrap>
           <InputWrap>
             <span>Password</span>
-            <Input type={"password"}  />
+            <Input type={"password"} />
           </InputWrap>
-          <Button>login</Button>
+          <Link style={{ textDecoration: "none" }} to={"/dashBoard"}>
+            <Button>login</Button>
+          </Link>
         </Wrapper>
         <Link style={{ textDecoration: "none" }} to={"/signUp"}>
           <pre>Don't have an account? Register</pre>
