@@ -26,7 +26,7 @@ const SignUp = () => {
           </InputWrap>
           <InputWrap>
             <span>Phone Number</span>
-            <Input  type={"number"} placeholder="Phone Number" />
+            <Input autoCorrect="off" type={"number"} placeholder="Phone Number" />
           </InputWrap>
           <InputWrap>
             <span>Password</span>
