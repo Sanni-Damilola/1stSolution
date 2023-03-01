@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import logo from "../../Image/logo.svg";
 
 const SignUp = () => {
   return (
     <Container>
       <Card>
-        <Logo />
+        <Logo src={logo} />
         <Wrapper>
           <h2>Create a Secure Accoun</h2>
           <p>Welcome to the future of Savings & Investments</p>
@@ -26,8 +27,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: rgb(6, 40, 99);
+  height: 800px;
 `;
-const Logo = styled.img``;
+const Logo = styled.img`
+  height: 33px;
+`;
 const Wrapper = styled.div``;
 const InputWrap = styled.div``;
 const Input = styled.input``;
