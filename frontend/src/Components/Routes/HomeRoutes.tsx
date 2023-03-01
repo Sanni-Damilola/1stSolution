@@ -4,7 +4,6 @@ import DashBoard from "../DashBoard/DashBoard";
 import SignIn from "../Home/Auth/SignIn";
 import SignUp from "../Home/Auth/SignUp";
 import HomePage from "../Home/HomePage/HomePage";
-import DashBoadRoute from "./DashBoadRoute";
 
 const HomeRoutes = () => {
   const element = useRoutes([

@@ -1,5 +1,6 @@
 import React from "react";
 import Customers from "../Custom/Customers";
+import Footer from "../footer/Footer";
 import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
 import Investify from "../Investify/Investify";
@@ -17,6 +18,7 @@ const HomePage = () => {
       <Investify />
       <Meet />
       <Customers />
+      <Footer />
     </div>
   );
 };
