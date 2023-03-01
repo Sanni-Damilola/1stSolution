@@ -64,12 +64,6 @@ const Footer = () => {
 
 export default Footer;
 
-// const = styled.div``;
-
-// const = styled.div``;
-
-// const = styled.div``;
-
 const Power = styled.div`
   width: 100%;
   text-align: center;
@@ -79,17 +73,10 @@ const Power = styled.div`
   margin-bottom: 30px;
 `;
 
-// const Icon = styled.div`
-// border-radius: 5px;
-// /* margin-right: 10px; */
-// /* font-size: 30px; */
-// background-color: #0c1825;
-// `;
-
 const Socials = styled.div`
   font-size: 30px;
   cursor: ponter;
-  /* gap: 2rem; */
+  background-color: red;
 `;
 
 const About = styled.div`
@@ -119,7 +106,6 @@ const Contain = styled.div`
   height: 100%;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
 `;
 
 const Foot = styled.div`
