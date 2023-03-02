@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { IinvestorModel } from "../interface/AllInterFace"; 
+import { IinvestorModel } from "../../interface/AllInterFace"; 
 interface MainData extends IinvestorModel, mongoose.Document {}
 
 const investSchema = new mongoose.Schema<IinvestorModel>(
