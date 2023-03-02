@@ -3,6 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import styled from "styled-components";
 import SideBarProps from "../Global/SideBarProps";
 import logo from "../Image/logo.svg";
+import { ImHome2 } from "react-icons/im";
 
 const DashBoard = () => {
   return (
@@ -14,7 +15,7 @@ const DashBoard = () => {
           </Menu>
           <Logo src={logo} />
         </MenuWrapper>
-        <SideBarProps />
+        <SideBarProps text="home" icon={<ImHome2 />} />
       </MenuBar>
       <ManinDasboard></ManinDasboard>
     </Container>
