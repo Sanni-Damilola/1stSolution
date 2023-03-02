@@ -1,5 +1,7 @@
 import React from "react";
+import { AiOutlineMenu } from "react-icons/ai";
 import styled from "styled-components";
+import SideBarProps from "../Global/SideBarProps";
 import logo from "../Image/logo.svg";
 
 const DashBoard = () => {
@@ -7,9 +9,12 @@ const DashBoard = () => {
     <Container>
       <MenuBar>
         <MenuWrapper>
-          <Menu></Menu>
+          <Menu>
+            <AiOutlineMenu />
+          </Menu>
           <Logo src={logo} />
         </MenuWrapper>
+        <SideBarProps />
       </MenuBar>
       <ManinDasboard></ManinDasboard>
     </Container>
@@ -18,11 +23,25 @@ const DashBoard = () => {
 
 export default DashBoard;
 const Logo = styled.img`
-  height: 33px;
+  height: 26px;
 `;
 
-const MenuWrapper = styled.div``;
-const Menu = styled.div``;
+const MenuWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-top: 40px;
+`;
+const Menu = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3px;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  margin-right: 30px;
+`;
 
 const Container = styled.div`
   width: 100%;

@@ -1,7 +1,10 @@
 import React from "react";
+import styled from "styled-components";
 
-const sideBarProps = () => {
-  return <div>sideBarProps</div>;
+const SideBarProps = () => {
+  return <Button>SideBarProps</Button>;
 };
 
-export default sideBarProps;
+export default SideBarProps;
+
+const Button = styled.div``;
