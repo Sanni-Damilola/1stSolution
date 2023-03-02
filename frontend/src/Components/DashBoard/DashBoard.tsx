@@ -19,15 +19,15 @@ const DashBoard = () => {
   }; // menu bar
   const [savings, setSavings] = React.useState(false);
   const savingsRoute = () => {
-    setHome(!home);
+    setSavings(!home);
   }; // menu bar
   const [invest, setInvest] = React.useState(false);
   const investRoute = () => {
-    setHome(!home);
+    setInvest(!home);
   }; // menu bar
   const [account, setAccount] = React.useState(false);
   const accountRoute = () => {
-    setHome(!home);
+    setAccount(!home);
   }; // menu bar
 
   return (
