@@ -8,14 +8,22 @@ import { ImHome2 } from "react-icons/im";
 const DashBoard = () => {
   return (
     <Container>
-      <MenuBar>
+      <MenuBar width="">
         <MenuWrapper>
           <Menu>
             <AiOutlineMenu />
           </Menu>
           <Logo src={logo} />
         </MenuWrapper>
-        <SideBarProps text="home" icon={<ImHome2 />} />
+        <SideBarProps
+          paddingleft=""
+          bg="value"
+          color="value"
+          displayIcon="value"
+          padding="value"
+          text="home"
+          icon={<ImHome2 />}
+        />
       </MenuBar>
       <ManinDasboard></ManinDasboard>
     </Container>
@@ -49,8 +57,8 @@ const Container = styled.div`
   height: fit-content;
   display: flex;
 `;
-const MenuBar = styled.div`
-  width: 260px;
+const MenuBar = styled.div<{ width: string }>`
+  width: ${({ width }) => (width ? "260px" : "73px")};
   height: 100vh;
   flex-direction: column;
   display: flex;
