@@ -43,10 +43,12 @@ export interface ISaveLock {
 export interface ITargetData {
   amount: number;
   fixedAmount: number;
+  interest: number;
   dateTime: string;
-  targetValue: string;
+  title: string;
+  targetValue: boolean;
+  Targetbalance: number;
 } // setting the Object Type for TargetData
-
 
 export interface IinvestorModel {
   title: string;
@@ -60,8 +62,6 @@ export interface IinvestorModel {
   totalUnit: number;
   amountPerUnit: number;
 } // setting the Object Type for IinvestorModel
-
-
 
 export interface InvestorData {
   invertorId: string;
