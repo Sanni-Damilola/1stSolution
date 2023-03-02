@@ -6,7 +6,8 @@ import logo from "../Image/logo.svg";
 import { ImHome2 } from "react-icons/im";
 import { RxPerson, RxTarget } from "react-icons/rx";
 import { IoRocketOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import MainDetailDashBoard from "../Routes/MainDetailDashBoard";
 
 const DashBoard = () => {
   // menu menuSidebar functions 👇👇
@@ -81,7 +82,7 @@ const DashBoard = () => {
             icon={<RxTarget />}
           />
         </Hold>
-        <Link to={"/investify"} onClick={accountRoute}>
+        <Hold onClick={investRoute}>
           <SideBarProps
             paddingleft={invest ? "" : "value"}
             bg={invest ? "" : "value"}
@@ -91,8 +92,8 @@ const DashBoard = () => {
             text="invest"
             icon={<IoRocketOutline />}
           />
-        </Link>
-        <Hold onClick={investRoute}>
+        </Hold>
+        <Hold onClick={accountRoute}>
           <SideBarProps
             paddingleft={account ? "" : "value"}
             bg={account ? "" : "value"}
@@ -104,7 +105,9 @@ const DashBoard = () => {
           />
         </Hold>
       </MenuBar>
-      <ManinDasboard></ManinDasboard>
+      <ManinDasboard>
+        <MainDetailDashBoard />
+      </ManinDasboard>
     </Container>
   );
 };

@@ -21,9 +21,7 @@ const SignIn = () => {
             <span>Password</span>
             <Input type={"password"} />
           </InputWrap>
-          <Link style={{ textDecoration: "none" }} to={"/dashBoard"}>
-            <Button>login</Button>
-          </Link>
+          <Button>login</Button>
         </Wrapper>
         <Link style={{ textDecoration: "none" }} to={"/signUp"}>
           <pre>Don't have an account? Register</pre>
