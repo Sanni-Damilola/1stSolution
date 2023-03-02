@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const DashBoard = () => {
   return (
     <Container>
       <MenuBar></MenuBar>
-      <ManinDasboard></ManinDasboard>
+      <ManinDasboard>
+        <Link to={"/"}></Link>
+      </ManinDasboard>
     </Container>
   );
 };
@@ -20,7 +23,8 @@ const Container = styled.div`
 const MenuBar = styled.div`
   width: 260px;
   height: 100vh;
-  fdc
+  flex-direction: column;
+  display: flex;
   background-color: rgb(6, 40, 99);
 `;
 const ManinDasboard = styled.div`
