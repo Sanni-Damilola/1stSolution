@@ -6,6 +6,11 @@ import logo from "../Image/logo.svg";
 import { ImHome2 } from "react-icons/im";
 
 const DashBoard = () => {
+  const [menu, setMenu] = React.useState(false);
+  const menuSidebar = () => {
+    setMenu(!menu);
+  }; // menu bar
+
   return (
     <Container>
       <MenuBar width="">
