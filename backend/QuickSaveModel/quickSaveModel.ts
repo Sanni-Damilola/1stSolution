@@ -1,21 +1,22 @@
 import mongoose from "mongoose";
 import { IQuickSave } from "../interface/AllInterFace";
 
-// creating QuickSave Model
-//  👇👇
 interface MainData extends IQuickSave, mongoose.Document {}
 
-const historySchema = new mongoose.Schema<IQuickSave>(
+const QuickSchema = new mongoose.Schema<IQuickSave>(
   {
     amount: {
       type: Number,
     },
+
     autoSave: {
       type: Boolean,
     },
+
     dateTime: {
-      type: String || Number,
+      type: Number || String,
     },
+
     interest: {
       type: Number,
     },
@@ -23,4 +24,4 @@ const historySchema = new mongoose.Schema<IQuickSave>(
   { timestamps: true }
 );
 
-export default mongoose.model<MainData>("histories", historySchema);
+export default mongoose.model<MainData>("quicksaves", QuickSchema);
