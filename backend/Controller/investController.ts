@@ -6,7 +6,7 @@ import walletModel from "../WalletModel/walletModel";
 export const CreatInvestify = async (req: Request, res: Response) => {
   try {
     const getUser = await userModel.findById(req.params.id);
-    // const getWallet = await WalletModel.findById(getUser?._id)
+    const getWallet = await walletModel.findById(getUser?._id);
     const dater = new Date().toDateString();
     if (getUser?.isAdmin === true) {
       const { title, description, category, duration, amountPerUnit } =
@@ -30,7 +30,7 @@ export const CreatInvestify = async (req: Request, res: Response) => {
     }
   } catch (err) {
     return res.status(404).json({
-      message: "an error occurred while creating",
+      message: "an error occurred in CreatInvestify",
     });
   }
 };
