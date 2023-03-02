@@ -12,33 +12,38 @@ const DashBoard = () => {
   const [menu, setMenu] = React.useState(false);
   const menuSidebar = () => {
     setMenu(!menu);
+    setAccount(true);
+    setInvest(true);
+    setAccount(true);
+    setSavings(true);
+    setHome(true);
   }; // menu bar
 
   // menu Route functions 👇👇
-  const [home, setHome] = React.useState(false);
+  const [home, setHome] = React.useState(true);
   const homeRoute = () => {
-    setHome(!home);
+    setHome(false);
     setInvest(true);
     setAccount(true);
     setSavings(true);
   }; // menu bar
   const [savings, setSavings] = React.useState(true);
   const savingsRoute = () => {
-    setSavings(!savings);
+    setSavings(false);
     setInvest(true);
     setAccount(true);
     setHome(true);
   }; // menu bar
   const [invest, setInvest] = React.useState(true);
   const investRoute = () => {
-    setInvest(!invest);
+    setInvest(false);
     setSavings(true);
     setAccount(true);
     setHome(true);
   }; // menu bar
   const [account, setAccount] = React.useState(true);
   const accountRoute = () => {
-    setAccount(!account);
+    setAccount(false);
     setSavings(true);
     setInvest(true);
     setHome(true);
@@ -98,7 +103,7 @@ const DashBoard = () => {
           />
         </Hold>
       </MenuBar>
-      <ManinDasboard mainDashboard={menu ? "value" : ""}></ManinDasboard>
+      <ManinDasboard>sadh</ManinDasboard>
     </Container>
   );
 };
@@ -134,15 +139,14 @@ const Container = styled.div`
   display: flex;
 `;
 const MenuBar = styled.div<{ width: string }>`
-  width: ${({ width }) => (width ? "260px" : "73px")};
+  width: ${({ width }) => (width ? "320px" : "73px")};
   height: 100vh;
   flex-direction: column;
   display: flex;
   background-color: rgb(6, 40, 99);
   transition: all 500ms;
 `;
-const ManinDasboard = styled.div<{ mainDashboard: string }>`
+const ManinDasboard = styled.div`
   background-color: green;
-  width: ${({ mainDashboard }) =>
-    mainDashboard ? "calc(100% - 260px)" : "calc(100% - 73px)"};
+  width: 100%;
 `;
