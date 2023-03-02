@@ -1,6 +1,6 @@
-import quickSaveModel from "../QuickSaveModel/quickSaveModel";
+import quickSaveModel from "../Models/QuickSaveModel/quickSaveModel";
 import { Request, Response } from "express";
-import walletModel from "../WalletModel/walletModel";
+import walletModel from "../Models/WalletModel/walletModel";
 import mongoose from "mongoose";
 
 export const CreateQuickSave = async (req: Request, res: Response) => {
