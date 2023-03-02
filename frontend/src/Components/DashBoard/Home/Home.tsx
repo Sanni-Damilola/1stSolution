@@ -1,46 +1,33 @@
-import React from 'react';
-import styled from 'styled-components';
-import DashHome from '../dashHome/DashHome';
-import SideBar from './SideBar';
-
-
+import React from "react";
+import styled from "styled-components";
 
 const Dash = () => {
   return (
     <div>
+      <Main>
+        <Side></Side>
 
-        <Main>
-            
-            <Side>
-                 <SideBar />
-            </Side>
-            
-            <Dashh>
-                <DashHome />
-            </Dashh>
-
-        </Main>
-
+        <Dashh></Dashh>
+      </Main>
     </div>
-  )
-}
+  );
+};
 
 export default Dash;
 
 const Dashh = styled.div`
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 `;
 
 const Side = styled.div`
-width: 250px;
-position: fixed;
+  width: 250px;
+  position: fixed;
 `;
 
 const Main = styled.div`
-width: 100%;
-/* height: 100%; */
-display: flex;
-justify-content: flex-start;
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: flex-start;
 `;
-
