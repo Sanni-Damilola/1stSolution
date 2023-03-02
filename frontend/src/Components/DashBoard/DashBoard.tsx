@@ -22,11 +22,11 @@ const DashBoard = () => {
     setHome(!home);
   }; // menu bar
   const [invest, setInvest] = React.useState(false);
-  const homeRoute = () => {
+  const investRoute = () => {
     setHome(!home);
   }; // menu bar
-  const [home, setHome] = React.useState(false);
-  const homeRoute = () => {
+  const [account, setAccount] = React.useState(false);
+  const accountRoute = () => {
     setHome(!home);
   }; // menu bar
 
