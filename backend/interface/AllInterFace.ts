@@ -46,3 +46,25 @@ export interface ITargetData {
   dateTime: string;
   targetValue: string;
 } // setting the Object Type for TargetData
+
+
+export interface IinvestorModel {
+  title: string;
+  percentageInterest: number;
+  description: string;
+  investors: {}[];
+  startTime: string;
+  duration: string;
+  category: string;
+  status: boolean;
+  totalUnit: number;
+  amountPerUnit: number;
+} // setting the Object Type for IinvestorModel
+
+
+
+export interface InvestorData {
+  invertorId: string;
+  amount: number;
+  unit: number;
+} // setting the Object Type for InvestorData
