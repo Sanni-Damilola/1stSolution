@@ -4,13 +4,26 @@ import styled from "styled-components";
 interface props {
   icon: any;
   text: string;
+  display: string;
+  bg: string;
+  color: string;
+  padding: string;
 }
 
-const SideBarProps: React.FC<props> = ({ text, icon }) => {
+const SideBarProps: React.FC<props> = ({
+  text,
+  icon,
+  bg,
+  display,
+  color,
+  padding,
+}) => {
   return (
     <Button>
-      <Icon>{icon}</Icon>
-      <Text>{text}</Text>
+      <Icon display={display}>{icon}</Icon>
+      <Text bg={bg} color={color} padding={padding}>
+        {text}
+      </Text>
     </Button>
   );
 };
@@ -22,8 +35,8 @@ const Button = styled.div`
   padding-left: 40px;
   margin-top: 40px;
 `;
-const Icon = styled.div`
-  display: flex;
+const Icon = styled.div<{ display: string }>`
+  display: ${({ display }) => (display ? "flex" : "none")};
   justify-content: center;
   align-items: center;
   color: white;
