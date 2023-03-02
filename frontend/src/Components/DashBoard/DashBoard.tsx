@@ -4,6 +4,8 @@ import styled from "styled-components";
 import SideBarProps from "../Global/SideBarProps";
 import logo from "../Image/logo.svg";
 import { ImHome2 } from "react-icons/im";
+import { RxPerson, RxTarget } from "react-icons/rx";
+import { IoRocketOutline } from "react-icons/io5";
 
 const DashBoard = () => {
   // menu menuSidebar functions 👇👇
@@ -16,18 +18,30 @@ const DashBoard = () => {
   const [home, setHome] = React.useState(false);
   const homeRoute = () => {
     setHome(!home);
+    setInvest(true);
+    setAccount(true);
+    setSavings(true);
   }; // menu bar
-  const [savings, setSavings] = React.useState(false);
+  const [savings, setSavings] = React.useState(true);
   const savingsRoute = () => {
-    setSavings(!home);
+    setSavings(!savings);
+    setInvest(true);
+    setAccount(true);
+    setHome(true);
   }; // menu bar
-  const [invest, setInvest] = React.useState(false);
+  const [invest, setInvest] = React.useState(true);
   const investRoute = () => {
-    setInvest(!home);
+    setInvest(!invest);
+    setSavings(true);
+    setAccount(true);
+    setHome(true);
   }; // menu bar
-  const [account, setAccount] = React.useState(false);
+  const [account, setAccount] = React.useState(true);
   const accountRoute = () => {
-    setAccount(!home);
+    setAccount(!account);
+    setSavings(true);
+    setInvest(true);
+    setHome(true);
   }; // menu bar
 
   return (
@@ -41,7 +55,7 @@ const DashBoard = () => {
         </MenuWrapper>
         <Hold onClick={homeRoute}>
           <SideBarProps
-            paddingleft={home ? "value" : ""}
+            paddingleft={home ? "" : "value"}
             bg={home ? "" : "value"}
             color={home ? "" : "value"}
             displayIcon="value"
@@ -52,39 +66,39 @@ const DashBoard = () => {
         </Hold>
         <Hold onClick={savingsRoute}>
           <SideBarProps
-            paddingleft={savings ? "value" : ""}
+            paddingleft={savings ? "" : "value"}
             bg={savings ? "" : "value"}
             color={savings ? "" : "value"}
             displayIcon="value"
             padding={savings ? "" : "value"}
-            text="home"
-            icon={<ImHome2 />}
+            text="savings"
+            icon={<RxTarget />}
           />
         </Hold>
         <Hold onClick={investRoute}>
           <SideBarProps
-            paddingleft={invest ? "value" : ""}
+            paddingleft={invest ? "" : "value"}
             bg={invest ? "" : "value"}
             color={invest ? "" : "value"}
             displayIcon="value"
             padding={invest ? "" : "value"}
-            text="home"
-            icon={<ImHome2 />}
+            text="invest"
+            icon={<IoRocketOutline />}
           />
         </Hold>
         <Hold onClick={accountRoute}>
           <SideBarProps
-            paddingleft={account ? "value" : ""}
+            paddingleft={account ? "" : "value"}
             bg={account ? "" : "value"}
             color={account ? "" : "value"}
             displayIcon="value"
             padding={account ? "" : "value"}
-            text="home"
-            icon={<ImHome2 />}
+            text="account"
+            icon={<RxPerson />}
           />
         </Hold>
       </MenuBar>
-      <ManinDasboard></ManinDasboard>
+      <ManinDasboard mainDashboard={menu ? "value" : ""}></ManinDasboard>
     </Container>
   );
 };
@@ -127,7 +141,8 @@ const MenuBar = styled.div<{ width: string }>`
   background-color: rgb(6, 40, 99);
   transition: all 500ms;
 `;
-const ManinDasboard = styled.div`
+const ManinDasboard = styled.div<{ mainDashboard: string }>`
   background-color: green;
-  width: calc(100% - 260px);
+  width: ${({ mainDashboard }) =>
+    mainDashboard ? "calc(100% - 260px)" : "calc(100% - 73px)"};
 `;
