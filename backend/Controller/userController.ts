@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
 import bcrypt from "bcrypt";
-import userModel from "../UserModel/UserModel";
+import userModel from "../Models/UserModel/UserModel";
 import jwt from "jsonwebtoken";
-import walletModel from "../WalletModel/walletModel";
+import walletModel from "../Models/WalletModel/walletModel";
 import mongoose from "mongoose";
-import historyModel from "../HistoryModel/historyModel";
+import historyModel from "../Models/HistoryModel/historyModel"
 
 export const registerUser = async (req: Request, res: Response) => {
   try {

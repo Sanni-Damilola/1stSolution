@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { IWalletData } from "../interface/AllInterFace";
+import { IWalletData } from "../../interface/AllInterFace";
 
 // creating Wallet Model
 //  👇👇
