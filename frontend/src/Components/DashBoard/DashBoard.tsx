@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineLogout, AiOutlineMenu } from "react-icons/ai";
 import styled from "styled-components";
 import SideBarProps from "../Global/SideBarProps";
 import logo from "../Image/logo.svg";
@@ -103,6 +103,12 @@ const DashBoard = () => {
             text="account"
             icon={<RxPerson />}
           />
+          <LogoOut>
+            <Icon>
+              <AiOutlineLogout />
+            </Icon>
+            <LogOutText>logout</LogOutText>
+          </LogoOut>
         </Hold>
       </MenuBar>
       <ManinDasboard>
@@ -114,6 +120,30 @@ const DashBoard = () => {
 
 export default DashBoard;
 
+const LogoOut = styled.div`
+  display: flex;
+  padding-left: 20px;
+  margin-top: 40px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 350ms;
+  align-self: flex-end;
+`;
+const Icon = styled.div`
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 3px;
+  font-size: 25px;
+`;
+const LogOutText = styled.div`
+  color: white;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 30px;
+  border-radius: 7px 7px 7px 0px;
+`;
 const Hold = styled.div``;
 
 const Logo = styled.img`
