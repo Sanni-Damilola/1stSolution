@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { IHistory } from "../interface/AllInterFace";
+import { IHistory } from "../../interface/AllInterFace";
 
 // creating History Model
 //  👇👇

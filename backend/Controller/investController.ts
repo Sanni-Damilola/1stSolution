@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import InvestorModel from "../InvestorModel/InvestorModel";
-import userModel from "../UserModel/userModel";
-import walletModel from "../WalletModel/walletModel";
+import InvestorModel from "../Models/InvestorModel/investorModel";
+import userModel from "../Models/UserModel/userModel";
+import walletModel from "../Models/WalletModel/walletModel";
 
 export const CreatInvestify = async (req: Request, res: Response) => {
   try {

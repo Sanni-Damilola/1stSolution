@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { IUser } from "../interface/AllInterFace";
+import { IUser } from "../../interface/AllInterFace";
 
 // creating User Model
 //  👇👇
