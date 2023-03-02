@@ -7,11 +7,16 @@ const DashBoadRoute = () => {
   const element = useRoutes([
     {
       path: "/dashBoard",
-      element: <DashBoard />,
-    },
-    {
-      path: "/investify",
-      element: <Investify />,
+      children: [
+        {
+          index: true,
+          element: <DashBoard />,
+        },
+        {
+          path: "/investify",
+          element: <Investify />,
+        },
+      ],
     },
   ]);
   return element;
