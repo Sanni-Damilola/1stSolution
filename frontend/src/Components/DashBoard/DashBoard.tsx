@@ -50,35 +50,35 @@ const DashBoard = () => {
             icon={<ImHome2 />}
           />
         </Hold>
-        <Hold onClick={homeRoute}>
+        <Hold onClick={savingsRoute}>
           <SideBarProps
-            paddingleft={home ? "value" : ""}
-            bg={home ? "" : "value"}
-            color={home ? "" : "value"}
+            paddingleft={savings ? "value" : ""}
+            bg={savings ? "" : "value"}
+            color={savings ? "" : "value"}
             displayIcon="value"
-            padding={home ? "" : "value"}
+            padding={savings ? "" : "value"}
             text="home"
             icon={<ImHome2 />}
           />
         </Hold>
-        <Hold onClick={homeRoute}>
+        <Hold onClick={investRoute}>
           <SideBarProps
-            paddingleft={home ? "value" : ""}
-            bg={home ? "" : "value"}
-            color={home ? "" : "value"}
+            paddingleft={invest ? "value" : ""}
+            bg={invest ? "" : "value"}
+            color={invest ? "" : "value"}
             displayIcon="value"
-            padding={home ? "" : "value"}
+            padding={invest ? "" : "value"}
             text="home"
             icon={<ImHome2 />}
           />
         </Hold>
-        <Hold onClick={homeRoute}>
+        <Hold onClick={accountRoute}>
           <SideBarProps
-            paddingleft={home ? "value" : ""}
-            bg={home ? "" : "value"}
-            color={home ? "" : "value"}
+            paddingleft={account ? "value" : ""}
+            bg={account ? "" : "value"}
+            color={account ? "" : "value"}
             displayIcon="value"
-            padding={home ? "" : "value"}
+            padding={account ? "" : "value"}
             text="home"
             icon={<ImHome2 />}
           />
