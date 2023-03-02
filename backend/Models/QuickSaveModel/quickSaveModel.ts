@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { IQuickSave } from "../interface/AllInterFace";
+import { IQuickSave } from "../../interface/AllInterFace";
 
 interface MainData extends IQuickSave, mongoose.Document {}
 

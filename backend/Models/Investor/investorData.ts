@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { InvestorData } from "../interface/AllInterFace";
+import { InvestorData } from "../../interface/AllInterFace";
 
 interface MainData extends InvestorData, mongoose.Document {}
 
