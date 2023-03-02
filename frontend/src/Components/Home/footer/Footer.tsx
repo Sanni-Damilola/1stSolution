@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import logo from "../../Image/headerLogo.svg";
+import Logo from "../../Global/Logo";
 
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
       <Foot>
         <Contain>
           <Link style={{ textDecoration: "none" }} to={"/"}>
-            <Logo src={logo} />
+            <Logo image={logo} height="33px" />
           </Link>
 
           <Products>
@@ -97,10 +98,6 @@ const Pig = styled.div`
 `;
 
 const Products = styled.div``;
-
-const Logo = styled.img`
-  height: 33px;
-`;
 
 const Contain = styled.div`
   width: 85%;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Logo from "../../Global/Logo";
 import logo from "../../Image/headerLogo.svg";
 
 const Header = () => {
@@ -20,7 +21,7 @@ const Header = () => {
     <Container boxShadow={show ? "value" : ""}>
       <Wrapper>
         <Link style={{ textDecoration: "none" }} to={"/"}>
-          <Logo src={logo} />
+          <Logo image={logo} height="33px" />
         </Link>
         <ButtonWrapper>
           <Link to={"/signIn"}>
@@ -59,9 +60,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-const Logo = styled.img`
-  height: 33px;
-`;
+
 const ButtonWrapper = styled.div``;
 const SignIn = styled.button`
   padding: 18px 23px;
