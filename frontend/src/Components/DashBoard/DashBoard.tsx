@@ -6,14 +6,21 @@ import logo from "../Image/logo.svg";
 import { ImHome2 } from "react-icons/im";
 
 const DashBoard = () => {
+  // menu menuSidebar functions 👇👇
   const [menu, setMenu] = React.useState(false);
   const menuSidebar = () => {
     setMenu(!menu);
   }; // menu bar
 
+  // menu Route functions 👇👇
+  const [menuRouteBar, setmenuRouteBar] = React.useState(false);
+  const menuRoute = () => {
+    setmenuRouteBar(!menuRouteBar);
+  }; // menu bar
+
   return (
     <Container>
-      <MenuBar width="">
+      <MenuBar onClick={menuSidebar} width={menu ? "" : "value"}>
         <MenuWrapper>
           <Menu>
             <AiOutlineMenu />
@@ -21,7 +28,7 @@ const DashBoard = () => {
           <Logo src={logo} />
         </MenuWrapper>
         <SideBarProps
-          paddingleft=""
+          paddingleft={menu ? "" : "value"}
           bg="value"
           color="value"
           displayIcon="value"
