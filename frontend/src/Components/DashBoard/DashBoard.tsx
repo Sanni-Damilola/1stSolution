@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../Image/headerLogo.svg";
+import logo from "../Image/logo.svg";
 
 const DashBoard = () => {
   return (
