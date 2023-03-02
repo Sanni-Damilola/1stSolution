@@ -36,6 +36,9 @@ const Button = styled.div<{ paddingLeft: string }>`
   display: flex;
   padding-left: ${({ paddingLeft }) => (paddingLeft ? "40px" : "20px")};
   margin-top: 40px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 350ms;
 `;
 const Icon = styled.div<{ displayIcon: string }>`
   display: ${({ displayIcon }) => (displayIcon ? "flex" : "none")};

@@ -13,29 +13,76 @@ const DashBoard = () => {
   }; // menu bar
 
   // menu Route functions 👇👇
-  const [menuRouteBar, setmenuRouteBar] = React.useState(false);
-  const menuRoute = () => {
-    setmenuRouteBar(!menuRouteBar);
+  const [home, setHome] = React.useState(false);
+  const homeRoute = () => {
+    setHome(!home);
+  }; // menu bar
+  const [savings, setSavings] = React.useState(false);
+  const savingsRoute = () => {
+    setHome(!home);
+  }; // menu bar
+  const [invest, setInvest] = React.useState(false);
+  const homeRoute = () => {
+    setHome(!home);
+  }; // menu bar
+  const [home, setHome] = React.useState(false);
+  const homeRoute = () => {
+    setHome(!home);
   }; // menu bar
 
   return (
     <Container>
-      <MenuBar onClick={menuSidebar} width={menu ? "" : "value"}>
+      <MenuBar width={menu ? "" : "value"}>
         <MenuWrapper>
-          <Menu>
+          <Menu onClick={menuSidebar}>
             <AiOutlineMenu />
           </Menu>
           <Logo src={logo} />
         </MenuWrapper>
-        <SideBarProps
-          paddingleft={menu ? "" : "value"}
-          bg="value"
-          color="value"
-          displayIcon="value"
-          padding="value"
-          text="home"
-          icon={<ImHome2 />}
-        />
+        <Hold onClick={homeRoute}>
+          <SideBarProps
+            paddingleft={home ? "value" : ""}
+            bg={home ? "" : "value"}
+            color={home ? "" : "value"}
+            displayIcon="value"
+            padding={home ? "" : "value"}
+            text="home"
+            icon={<ImHome2 />}
+          />
+        </Hold>
+        <Hold onClick={homeRoute}>
+          <SideBarProps
+            paddingleft={home ? "value" : ""}
+            bg={home ? "" : "value"}
+            color={home ? "" : "value"}
+            displayIcon="value"
+            padding={home ? "" : "value"}
+            text="home"
+            icon={<ImHome2 />}
+          />
+        </Hold>
+        <Hold onClick={homeRoute}>
+          <SideBarProps
+            paddingleft={home ? "value" : ""}
+            bg={home ? "" : "value"}
+            color={home ? "" : "value"}
+            displayIcon="value"
+            padding={home ? "" : "value"}
+            text="home"
+            icon={<ImHome2 />}
+          />
+        </Hold>
+        <Hold onClick={homeRoute}>
+          <SideBarProps
+            paddingleft={home ? "value" : ""}
+            bg={home ? "" : "value"}
+            color={home ? "" : "value"}
+            displayIcon="value"
+            padding={home ? "" : "value"}
+            text="home"
+            icon={<ImHome2 />}
+          />
+        </Hold>
       </MenuBar>
       <ManinDasboard></ManinDasboard>
     </Container>
@@ -43,6 +90,9 @@ const DashBoard = () => {
 };
 
 export default DashBoard;
+
+const Hold = styled.div``;
+
 const Logo = styled.img`
   height: 26px;
 `;
@@ -75,6 +125,7 @@ const MenuBar = styled.div<{ width: string }>`
   flex-direction: column;
   display: flex;
   background-color: rgb(6, 40, 99);
+  transition: all 500ms;
 `;
 const ManinDasboard = styled.div`
   background-color: green;
