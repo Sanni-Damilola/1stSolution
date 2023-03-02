@@ -123,15 +123,16 @@ export default DashBoard;
 const LogoOut = styled.div`
   display: flex;
   padding-left: 20px;
-  margin-top: 40px;
   align-items: center;
   cursor: pointer;
   transition: all 350ms;
-  align-self: flex-end;
+  margin-top: 280px;
 `;
 const Icon = styled.div`
+  display: flex;
   justify-content: center;
   align-items: center;
+  transform: rotate(-88deg);
   color: white;
   margin-top: 3px;
   font-size: 25px;
@@ -181,6 +182,5 @@ const MenuBar = styled.div<{ width: string }>`
   transition: all 500ms;
 `;
 const ManinDasboard = styled.div`
-  background-color: green;
   width: 100%;
 `;
