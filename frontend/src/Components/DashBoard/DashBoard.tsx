@@ -1,19 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import logo from "../Image/headerLogo.svg";
 
 const DashBoard = () => {
   return (
     <Container>
-      <MenuBar></MenuBar>
-      <ManinDasboard>
-        <Link to={"/"}></Link>
-      </ManinDasboard>
+      <MenuBar>
+        <MenuWrapper>
+          <Menu></Menu>
+          <Logo src={logo} />
+        </MenuWrapper>
+      </MenuBar>
+      <ManinDasboard></ManinDasboard>
     </Container>
   );
 };
 
 export default DashBoard;
+const Logo = styled.img`
+  height: 33px;
+`;
+
+const MenuWrapper = styled.div``;
+const Menu = styled.div``;
 
 const Container = styled.div`
   width: 100%;
