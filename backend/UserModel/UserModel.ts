@@ -28,6 +28,9 @@ const userSchema = new mongoose.Schema<IUser>(
     phoneNumber: {
       type: Number,
     },
+    isAdmin: {
+      type: Boolean,
+    },
     accountNumber: {
       type: Number,
     },

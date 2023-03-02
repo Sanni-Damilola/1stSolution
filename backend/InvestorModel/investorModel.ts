@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { IinvestorModel } from "../interface/AllInterFace"; 
 interface MainData extends IinvestorModel, mongoose.Document {}
 
-const InvestSchema = new mongoose.Schema<IinvestorModel>(
+const investSchema = new mongoose.Schema<IinvestorModel>(
   {
     title: {
       type: String,
@@ -50,4 +50,4 @@ const InvestSchema = new mongoose.Schema<IinvestorModel>(
   { timestamps: true }
 );
 
-export default mongoose.model<MainData>("investments", InvestSchema);
+export default mongoose.model<MainData>("investments", investSchema);

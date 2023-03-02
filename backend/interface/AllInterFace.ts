@@ -7,6 +7,7 @@ export interface IUser {
   accountNumber: number;
   amount: number;
   verified: boolean;
+  isAdmin: boolean;
   wallet: {}[];
   history: {}[];
 } // setting the Object Type for User
