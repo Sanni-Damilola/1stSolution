@@ -78,8 +78,8 @@ const Wrapper = styled.div`
 const Right = styled.div``;
 const Up = styled.div`
   width: 660px;
-  padding-top: 20px;
-  height: 180px;
+  padding-top: 10px;
+  height: 150px;
   border: 1px solid rgb(0, 0, 0, 0.2);
   border-radius: 10px 10px 10px 0px;
   b {
@@ -98,12 +98,15 @@ const TotalBalance = styled.span`
 `;
 const LearnMore = styled.div`
   border-top: 1px solid rgb(0, 0, 0, 0.2);
-  margin-top: 40px;
+  margin-top: 19px;
   height: 50px;
   display: flex;
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  :hover {
+    color: rgb(8, 62, 158);
+  }
 `;
 const Wrap = styled.div`
   color: black;
@@ -123,25 +126,39 @@ const Warning = styled.div`
   align-items: center;
   margin-right: 5px;
   font-size: 17px;
+  :hover {
+    color: rgb(8, 62, 158);
+  }
 `;
 const ButtonWrap = styled.div`
   display: flex;
   align-items: center;
-  height: 80px;
+  width: 97%;
+  height: 60px;
   padding-left: 19px;
-  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgb(0, 0, 0, 0.2);
 `;
 const Button = styled.span`
   color: rgb(26, 32, 44);
   font-size: 13px;
   font-weight: 600;
+  cursor: pointer;
 `;
-const StartInvesting = styled.div``;
+const StartInvesting = styled.div`
+  color: rgb(121, 19, 229);
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-top: 30px;
+`;
 const Down = styled.div`
   border: 1px solid rgb(0, 0, 0, 0.2);
   width: 660px;
-  height: 180px;
+  height: 280px;
   margin-top: 50px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
   border-radius: 10px 10px 10px 0px;
 `;
 const Account = styled.div``;
@@ -155,9 +172,33 @@ const Hold = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-const Text = styled.div``;
-const InvestButton = styled.div``;
+const Text = styled.span`
+  color: rgb(45, 55, 72);
+  font-size: 14px;
+  font-weight: 600;
+`;
+const InvestButton = styled.div`
+  border-radius: 8px 8px 8px 0px;
+  background-color: rgb(121, 19, 229);
+  padding: 5px 50px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 16px;
+  font-size: 16px;
+`;
 const Pecentage = styled.div``;
 const Extected = styled.div``;
-const LearnButton = styled.div``;
+const LearnButton = styled.div`
+  border-radius: 10px 10px 10px 0px;
+  padding: 5px 50px;
+  cursor: pointer;
+  border: 1px solid rgb(121, 19, 229);
+  color: rgb(121, 19, 229);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 16px;
+  font-size: 16px;
+`;
 const Left = styled.div``;
