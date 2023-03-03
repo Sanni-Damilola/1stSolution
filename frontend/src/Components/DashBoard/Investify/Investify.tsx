@@ -1,6 +1,7 @@
 import React from "react";
 import { AiFillWarning } from "react-icons/ai";
 import styled from "styled-components";
+import setUp from "../../Image/complete-setup-v3.jpg";
 
 const Investify = () => {
   return (
@@ -44,8 +45,11 @@ const Investify = () => {
             <Extected>extected roi</Extected>
             <h3>Up to 25%</h3>
             <pre>per annum</pre>
-            <Extected>COMPLETE YOUR SETUP</Extected>
           </Pecentage>
+          <Complete>
+            <Extected>COMPLETE YOUR SETUP</Extected>
+            <Image src={setUp} />
+          </Complete>
         </Left>
       </Wrapper>
     </Container>
@@ -53,6 +57,18 @@ const Investify = () => {
 };
 
 export default Investify;
+
+const Complete = styled.div`
+  flex-direction: column;
+  display: flex;
+  width: 300px;
+`;
+
+const Image = styled.img`
+  height: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+`;
 
 const ButtonIcon = styled.div`
   display: flex;
@@ -72,7 +88,6 @@ const Wrapper = styled.div`
   width: 90%;
   display: flex;
   justify-content: center;
-  align-items: center;
   justify-content: space-between;
 `;
 const Right = styled.div``;
@@ -134,8 +149,8 @@ const ButtonWrap = styled.div`
   display: flex;
   align-items: center;
   width: 97%;
-  height: 60px;
   padding-left: 19px;
+  height: 60px;
   border-bottom: 2px solid rgb(0, 0, 0, 0.2);
 `;
 const Button = styled.span`
@@ -188,8 +203,32 @@ const InvestButton = styled.div`
   margin-top: 16px;
   font-size: 16px;
 `;
-const Pecentage = styled.div``;
-const Extected = styled.div``;
+const Pecentage = styled.div`
+  height: 100px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  border-radius: 10px 10px 10px 0px;
+  margin-bottom: 60px;
+  padding-top: 15px;
+  padding-left: 15px;
+  h3 {
+    color: rgb(121, 19, 229);
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+  }
+  pre {
+    font-size: 12px;
+    color: rgb(113, 128, 150);
+    margin: 0;
+  }
+`;
+const Extected = styled.div`
+  font-weight: 600;
+  font-size: 10px;
+  color: rgb(54, 55, 72);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+`;
 const LearnButton = styled.div`
   border-radius: 10px 10px 10px 0px;
   padding: 5px 50px;
@@ -201,4 +240,6 @@ const LearnButton = styled.div`
   margin-top: 16px;
   font-size: 16px;
 `;
-const Left = styled.div``;
+const Left = styled.div`
+  width: 30%;
+`;
