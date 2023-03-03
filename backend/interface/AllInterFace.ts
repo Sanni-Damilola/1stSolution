@@ -39,6 +39,7 @@ export interface ISaveLock {
   interest: number;
   payBackTime: string;
   lock: boolean;
+  title: string;
 } // setting the Object Type for SaveLock
 
 export interface ITargetData {
@@ -47,7 +48,7 @@ export interface ITargetData {
   interest: number;
   dateTime: string;
   title: string;
-  targetValue: boolean;
+  targetValue: boolean;v
   Targetbalance: number;
 } // setting the Object Type for TargetData
 
