@@ -380,6 +380,7 @@ const Contain = styled.div<{ wd: string }>`
   width: ${(props) => props.wd};
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: flex-end;
   /* align-items: flex-start; */
   margin-right: 20px;
