@@ -8,6 +8,7 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { FiTarget } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const DashSaving = () => {
   const [show, setShow] = React.useState(false);
@@ -141,19 +142,22 @@ const DashSaving = () => {
           </Safe>
 
           <Boxes>
-            <Box style={{ backgroundColor: "#c4bfbf", color: "#0d60d8" }}>
-              <Icoon>
-                <FiTarget />
-              </Icoon>
+            <Link to="/saving/piggybank">
+              <Box style={{ backgroundColor: "#c4bfbf", color: "#0d60d8" }}>
+                <Icoon>
+                  <FiTarget />
+                </Icoon>
 
-              <BoxText>Piggybank</BoxText>
+                <BoxText>Piggybank</BoxText>
 
-              <BoxText2>
-                Strict savings automatically. Daily, weekly or monthly. 10% p.a
-              </BoxText2>
+                <BoxText2>
+                  Strict savings automatically. Daily, weekly or monthly. 10%
+                  p.a
+                </BoxText2>
 
-              <BoxAmount>10,000.00</BoxAmount>
-            </Box>
+                <BoxAmount>10,000.00</BoxAmount>
+              </Box>
+            </Link>
 
             <Box style={{ backgroundColor: "#d8d5d5", color: "green" }}>
               <Icoon>
@@ -169,19 +173,21 @@ const DashSaving = () => {
               <BoxAmount>10,000.00</BoxAmount>
             </Box>
 
-            <Box style={{ backgroundColor: "#f7e0e0", color: "#60a0fa" }}>
-              <Icoon>
-                <FiTarget />
-              </Icoon>
+            <Link to="/saving/safelock">
+              <Box style={{ backgroundColor: "#f7e0e0", color: "#60a0fa" }}>
+                <Icoon>
+                  <FiTarget />
+                </Icoon>
 
-              <BoxText>Safelock</BoxText>
+                <BoxText>Safelock</BoxText>
 
-              <BoxText2>
-                Lock funds to avaoid tempatations. Upfront interest
-              </BoxText2>
+                <BoxText2>
+                  Lock funds to avaoid tempatations. Upfront interest
+                </BoxText2>
 
-              <BoxAmount>10,000.00</BoxAmount>
-            </Box>
+                <BoxAmount>10,000.00</BoxAmount>
+              </Box>
+            </Link>
 
             <Box style={{ backgroundColor: "#e7dada", color: "#faaa32" }}>
               <Icoon>
@@ -235,12 +241,14 @@ export default DashSaving;
 
 const BoxAmount = styled.div`
   font-size: 13px;
+  text-decoration: none;
 `;
 
 const BoxText2 = styled.div`
   font-size: 12px;
   margin-bottom: 10px;
   width: 80%;
+  text-decoration: none;
 `;
 
 const BoxText = styled.div`
@@ -248,16 +256,19 @@ const BoxText = styled.div`
   font-weight: 700;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-decoration: none;
 `;
 
 const Icoon = styled.div`
   font-size: 25px;
+  text-decoration: none;
 `;
 
 const Box = styled.div`
+  text-decoration: none;
   cursor: pointer;
-  width: 30%;
-  height: 185px;
+  width: 360px;
+  height: 200px;
   border-radius: 8px 8px 8px 0;
   padding-left: 25px;
   display: flex;
@@ -265,6 +276,8 @@ const Box = styled.div`
   justify-content: center;
   /* justify-content: space-around; */
   background-color: #b1afaf;
+  margin-bottom: 15px;
+  margin-right: 15px;
 `;
 
 const Boxes = styled.div`
@@ -273,7 +286,7 @@ const Boxes = styled.div`
   flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 30px;
-  gap: 1rem;
+  gap: 2rem;
   margin-left: 5px;
 `;
 
@@ -348,7 +361,9 @@ const Good = styled.div`
   font-weight: 700;
 `;
 
-const Even = styled.div``;
+const Even = styled.div`
+  margin-top: 30px;
+`;
 
 const Eben = styled.div`
   width: 100%;
