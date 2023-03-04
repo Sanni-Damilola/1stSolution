@@ -5,7 +5,7 @@ import DashBoard from "../DashBoard/DashBoard";
 const DashBoadRoute = () => {
   const element = useRoutes([
     {
-      path: "/dashBoard",
+      path: "/",
       element: <DashBoard />,
     },
   ]);
