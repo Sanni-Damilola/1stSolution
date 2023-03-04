@@ -45,11 +45,11 @@ const Cards = () => {
   };
 
   const posting = useMutation({
-    mutationFn: (data) => {
+    mutationFn: (data: any) => {
       return TransferMoney(data, user?._id);
     },
 
-    onSuccess: (data) => {
+    onSuccess: (data: any) => {
       Swal.fire({
         title: "succeful",
         icon: "success",
