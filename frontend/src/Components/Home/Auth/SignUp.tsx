@@ -48,8 +48,8 @@ const SignUp = () => {
     onSuccess: (myData) => {
       // console.log("user", myData);
       dispatch(User(myData.data));
-      navigate("/dashboard");
     },
+    re
   });
 
   const Submit = handleSubmit(async (data) => {
