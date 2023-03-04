@@ -248,6 +248,7 @@ const Right = styled.div`
   width: 30%;
   display: flex;
   flex-direction: column;
+  margin-left: 40px;
 `;
 const View = styled.div`
   h4 {
@@ -337,7 +338,6 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid #e2e8f0;
-  margin: 30px;
 `;
 const Down = styled.div`
   width: 100%;
@@ -429,20 +429,20 @@ const Text = styled.div`
 const Up = styled.div`
   width: 100%;
   display: flex;
+  height: fit-content;
   flex-direction: column;
   border-bottom: 1px solid #e2e8f0;
   padding-bottom: 25px;
 `;
 const Top = styled.div`
   width: 100%;
-  height: 175px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   border: 1px solid #e2e8f0;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border: 10px 10px 10px 0px;
   padding-left: 15px;
+  padding-bottom: 15px;
 `;
 const Left = styled.div`
   width: 65%;
