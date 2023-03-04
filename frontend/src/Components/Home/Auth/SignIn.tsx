@@ -41,10 +41,10 @@ const SignIn = () => {
 
     onSuccess: (myData) => {
       dispatch(User(myData.data));
-      na
+      // navigate to  main dashboard
+      navigate("/")
     },
   });
-  console.log("here", posting);
 
   const Submit = handleSubmit(async (data) => {
     posting.mutate(data);
