@@ -71,7 +71,6 @@ const Pigbox = () => {
           icon: "error",
           text: `${err.response?.data?.message}`,
         });
-        console.log(err);
       });
   });
   return (

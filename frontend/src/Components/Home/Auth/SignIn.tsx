@@ -19,7 +19,6 @@ const SignIn = () => {
   const navigate = useNavigate();
   const schema = yup
     .object({
-      userName: yup.string().required(),
       email: yup.string().required(),
       password: yup.string().min(9).required(),
     })
