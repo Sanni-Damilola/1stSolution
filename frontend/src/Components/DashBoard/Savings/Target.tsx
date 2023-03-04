@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import img from "../Assets/person.png";
+// import img from "../Assets/person.png";
 import TargetAccount from "./TargetAccount";
 
 const Target = () => {
@@ -16,7 +16,7 @@ const Target = () => {
               </Bold>
             </Left>
             <Right>
-              <Img src={img} />
+              <Img src={""} />
             </Right>
           </Top>
           <Bottom>

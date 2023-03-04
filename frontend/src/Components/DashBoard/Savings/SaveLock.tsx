@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import SafelockAcc from "./SavelockAcc";
 
-const Safelock = () => {
+const SafeLock = () => {
   return (
     <div>
       <Container>
@@ -22,7 +22,7 @@ const Safelock = () => {
             <NavLink to="/savings/piggybank" style={{ textDecoration: "none" }}>
               <Navs2>Piggybank</Navs2>
             </NavLink>
-            <NavLink to="/savings/safelock" style={{ textDecoration: "none" }}>
+            <NavLink to="/savings/safelocks" style={{ textDecoration: "none" }}>
               <Navs>Safelock</Navs>
             </NavLink>
             <NavLink to="/savings/target" style={{ textDecoration: "none" }}>
@@ -40,7 +40,7 @@ const Safelock = () => {
   );
 };
 
-export default Safelock;
+export default SafeLock;
 const Navs2 = styled.div`
   color: #a0aec0;
   font-family: U8, sans-serif;

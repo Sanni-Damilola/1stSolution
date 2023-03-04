@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import img from "../Assets/person.png";
+// import img from "../Assets/person.png";
 import Complete from "./Complete";
 import Cards from "./Cards";
 
@@ -18,7 +18,7 @@ const Home = () => {
             </P>
           </Left>
           <Right>
-            <Img src={img} />
+            <Img src={""} />
           </Right>
         </Top>
         <Complete />
@@ -75,5 +75,4 @@ const Container = styled.div`
   width: calc(100% - 19%);
   display: flex;
   justify-content: center;
-  margin-left: 290px;
 `;

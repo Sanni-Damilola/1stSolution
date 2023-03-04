@@ -22,7 +22,7 @@ const Piggybank = () => {
             <NavLink to="/savings/piggybank" style={{ textDecoration: "none" }}>
               <Navs>Piggybank</Navs>
             </NavLink>
-            <NavLink to="/savings/safelock" style={{ textDecoration: "none" }}>
+            <NavLink to="/savings/safelocks" style={{ textDecoration: "none" }}>
               <Navs2>Safelock</Navs2>
             </NavLink>
             <NavLink to="/savings/target" style={{ textDecoration: "none" }}>
