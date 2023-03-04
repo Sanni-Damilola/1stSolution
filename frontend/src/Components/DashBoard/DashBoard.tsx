@@ -7,7 +7,7 @@ import { ImHome2 } from "react-icons/im";
 import { RxPerson, RxTarget } from "react-icons/rx";
 import { IoRocketOutline } from "react-icons/io5";
 // import { Link } from "react-router-dom";
-import MainDetailDashBoard from "../Routes/MainDetailDashBoard";
+import DashBoadRoute from "../Routes/DashBoadRoute";
 
 const DashBoard = () => {
   // menu menuSidebar functions 👇👇
@@ -112,7 +112,7 @@ const DashBoard = () => {
         </Hold>
       </MenuBar>
       <ManinDasboard>
-        <MainDetailDashBoard />
+        <DashBoadRoute />
       </ManinDasboard>
     </Container>
   );
