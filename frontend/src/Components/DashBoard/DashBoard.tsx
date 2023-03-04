@@ -196,4 +196,6 @@ const MenuBar = styled.div<{ width: string }>`
 const ManinDasboard = styled.div`
   width: 100%;
   background-color: white;
+  height: 100vh;
+  overflow-y: scroll;
 `;

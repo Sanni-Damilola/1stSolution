@@ -14,6 +14,7 @@ import axios from "axios";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 const localUrl = "http://localhost:6400";
 const Cards = () => {
   const user = useAppSelector((state) => state.currentUser);
@@ -72,13 +73,17 @@ const Cards = () => {
           icon: "error",
           text: `${err.response?.data?.message}`,
         });
-        console.log(err);
       });
+    reset();
   });
   return (
     <Container>
       <Top>
-        <Icon>
+        <Icon
+          onClick={() => {
+            window.location.reload();
+          }}
+        >
           <TfiReload />
         </Icon>
         {/* <NavLink to="/save"> */}
@@ -86,13 +91,15 @@ const Cards = () => {
         {/* </NavLink> */}
       </Top>
       <Boxhold>
-        <Card>
-          <Image src={""} />
-          <Text>
-            <p>Total Savings</p>
-            <h2>₦0.00</h2>
-          </Text>
-        </Card>
+        <Link style={{ textDecoration: "none" }} to={"/savings"}>
+          <Card>
+            <Image src={""} />
+            <Text>
+              <p>Total Savings</p>
+              <h2>₦0.00</h2>
+            </Text>
+          </Card>
+        </Link>
         <Card2>
           <Image src={""} />
           <Text>
@@ -355,7 +362,9 @@ const Button = styled.div`
   transition: ease-in 350ms;
 `;
 const Icon = styled.div`
-  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+  color: rgb(0, 0, 0, 0.4);
 `;
 const Container = styled.div`
   width: 100%;
