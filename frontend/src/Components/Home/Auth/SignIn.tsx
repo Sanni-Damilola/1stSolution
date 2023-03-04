@@ -41,7 +41,7 @@ const SignIn = () => {
     mutationFn: createUser,
 
     onSuccess: (myData) => {
-      console.log(myData)
+      console.log("here",myData);
       // dispatch(User(myData.data));
     },
   });
@@ -50,10 +50,9 @@ const SignIn = () => {
     posting.mutate(data);
   });
 
-
   return (
     <Container>
-      <Card>
+      <Card onSubmit={Submit}>
         <Link style={{ textDecoration: "none" }} to={"/"}>
           <Logo src={logo} />
         </Link>
@@ -66,12 +65,11 @@ const SignIn = () => {
           </InputWrap>
           <InputWrap>
             <span>Password</span>
-            <Input
-              {...register("password")}
-              type={"password"}
-            />
+            <Input {...register("password")} type={"password"} />
           </InputWrap>
-          <Button>login</Button>
+          <Button type="submit" onClick={Submit}>
+            login
+          </Button>
         </Wrapper>
         <Link style={{ textDecoration: "none" }} to={"/signUp"}>
           <pre>Don't have an account? Register</pre>
@@ -159,7 +157,7 @@ const Input = styled.input`
     font-weight: 500;
   }
 `;
-const Card = styled.div`
+const Card = styled.form`
   display: flex;
   width: 100%;
   padding-bottom: 20px;
