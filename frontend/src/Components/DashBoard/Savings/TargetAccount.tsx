@@ -310,7 +310,7 @@ const All1 = styled.div`
 `;
 const Below = styled.div`
   width: 100%;
-  height: 520px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   border: 1px solid #e2e8f0;
@@ -319,6 +319,7 @@ const Below = styled.div`
   border-bottom-right-radius: 10px;
   padding-left: 15px;
   margin-top: 40px;
+  padding-bottom: 20px;
 `;
 const Write = styled.div`
   p {
