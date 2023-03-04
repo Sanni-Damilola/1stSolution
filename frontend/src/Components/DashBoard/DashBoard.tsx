@@ -121,16 +121,22 @@ const DashBoard = () => {
             icon={<RxPerson />}
           />
         </Link>
-        <LogoOut
-          onClick={() => {
-            dispatch(logout());
-          }}
+        <Link
+          style={{ textDecoration: "none" }}
+          to={"/sigIn"}
+          onClick={accountRoute}
         >
-          <Icon>
-            <AiOutlineLogout />
-          </Icon>
-          <LogOutText>logout</LogOutText>
-        </LogoOut>
+          <LogoOut
+            onClick={() => {
+              dispatch(logout());
+            }}
+          >
+            <Icon>
+              <AiOutlineLogout />
+            </Icon>
+            <LogOutText>logout</LogOutText>
+          </LogoOut>
+        </Link>
       </MenuBar>
       <ManinDasboard>
         <DashBoadRoute />
