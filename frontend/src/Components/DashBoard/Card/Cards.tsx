@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { TfiReload } from "react-icons/tfi";
-import img1 from "../Assets/diamond.png";
-import img2 from "../Assets/power.png";
-import img3 from "../Assets/money.png";
+// import img1 from "../Assets/diamond.png";
+// import img2 from "../Assets/power.png";
+// import img3 from "../Assets/money.png";
 import { AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
@@ -87,21 +87,21 @@ const Cards = () => {
       </Top>
       <Boxhold>
         <Card>
-          <Image src={img1} />
+          <Image src={""} />
           <Text>
             <p>Total Savings</p>
             <h2>₦0.00</h2>
           </Text>
         </Card>
         <Card2>
-          <Image src={img2} />
+          <Image src={""} />
           <Text>
             <p>Total Investments</p>
             <h2>₦0.00</h2>
           </Text>
         </Card2>
         <Card3>
-          <Image src={img3} />
+          <Image src={""} />
           <Text>
             <p>Flex Dollar</p>
             <h2>₦0.00</h2>
