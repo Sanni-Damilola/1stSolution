@@ -37,6 +37,6 @@ export const TransferMoney = async (data: any, id: any) => {
 
 export const LoginUser = async ({ email, password }: any) => {
   return await axios
-    .post(`${localUrl}/api/user/login/}`, email, password)
+    .post(`${localUrl}/api/user/login}`, email, password)
     .then((res) => res.data);
 };

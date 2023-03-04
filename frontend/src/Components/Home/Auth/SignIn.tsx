@@ -8,7 +8,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
-import { createUser } from "../../Api/Api";
+import { createUser, LoginUser } from "../../Api/Api";
 import { UserData } from "../../interface/interface";
 import { UseAppDispach } from "../../Global/ReduxState/Store";
 import axios from "axios";
@@ -37,8 +37,8 @@ const SignIn = () => {
   });
 
   const posting = useMutation({
-    mutationKey: ["created"],
-    mutationFn: createUser,
+    mutationKey: ["login"],
+    mutationFn: LoginUser,
 
     onSuccess: (myData) => {
       console.log("here",myData);
