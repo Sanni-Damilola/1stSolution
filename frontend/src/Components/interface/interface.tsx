@@ -1,48 +1,46 @@
-export interface IUser {
+export interface UserData {
   name: string;
   email: string;
-  password: string;
   userName: string;
+  password: string;
   phoneNumber: number;
-  accountNumber: number;
-  amount: number;
-  verified: boolean;
-  isAdmin: boolean;
-  wallet: {}[];
-  history: {}[];
-} // setting the Object Type for User
+  _id: string;
+  wallet: [];
+}
 
-export interface IWalletData {
-  balance: number;
+export interface WalletData {
+  Balance: number;
   credit: number;
   debit: number;
   quickSave: {}[];
   saveLock: {}[];
-  target: {}[];
-} // setting the Object Type for Wallet
+  Target: {}[];
+  invest: {}[];
+  myInvestment: [];
+}
 
-export interface IHistory {
+export interface HistoryData {
   message: string;
-  transactionRefrence: string;
+  transactionReference: number;
   transactionType: string;
-} // setting the Object Type for History
+}
 
-export interface IQuickSave {
+export interface Quick {
   amount: number;
   autoSave: boolean;
-  dateTime: string | number;
+  dateTime: number | string;
   interest: number;
-} // setting the Object Type for QuickSave
+}
 
-export interface ISaveLock {
+export interface Locks {
   amount: number;
+  PayBackTime: string;
   interest: number;
-  payBackTime: string;
   lock: boolean;
   title: string;
-} // setting the Object Type for SaveLock
+}
 
-export interface ITargetData {
+export interface TargetData {
   amount: number;
   fixedAmount: number;
   interest: number;
@@ -50,9 +48,9 @@ export interface ITargetData {
   title: string;
   targetValue: boolean;
   Targetbalance: number;
-} // setting the Object Type for TargetData
+}
 
-export interface IinvestorModel {
+export interface Inves {
   title: string;
   percentageInterest: number;
   description: string;
@@ -63,10 +61,10 @@ export interface IinvestorModel {
   status: boolean;
   totalUnit: number;
   amountPerUnit: number;
-} // setting the Object Type for IinvestorModel
+}
 
 export interface InvestorData {
-  invertorId: string;
+  investorId: string;
   amount: number;
   unit: number;
-} // setting the Object Type for InvestorData
+}

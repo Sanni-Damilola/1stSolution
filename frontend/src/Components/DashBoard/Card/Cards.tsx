@@ -8,7 +8,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { TransferMoney } from "../ApiCalls/ApiCall";
-import { useAppSelector } from "../Global/Stroe";
+import { useAppSelector } from "../../Global/ReduxState/Store"; 
 import Swal from "sweetalert2";
 import axios from "axios";
 import * as yup from "yup";

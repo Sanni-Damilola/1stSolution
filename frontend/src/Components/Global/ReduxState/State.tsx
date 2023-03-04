@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit/dist/createAction";
-import { UserData } from "../AllInterfaces";
+import { UserData } from "../../interface/interface";
 
 const initialState = {
   currentUser: {} as UserData | null,

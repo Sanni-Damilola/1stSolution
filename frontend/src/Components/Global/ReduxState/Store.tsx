@@ -1,4 +1,4 @@
-import myReducer from "./ReduxState";
+import myReducer from "./State";
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook } from "react-redux";
 import { useDispatch, useSelector } from "react-redux";
