@@ -46,24 +46,17 @@ const SignUp = () => {
     mutationFn: createUser,
 
     onSuccess: (myData) => {
-      // console.log("user", myData);
       dispatch(User(myData.data));
     },
-    re
   });
 
   const Submit = handleSubmit(async (data) => {
     posting.mutate(data);
-    // await axios.post(`${localUrl}/api/user/register`, data).then((res) => {
-    // console.log(res);
-    // });
-
-    // reset()
   });
 
   return (
     <Container>
-      <Card>
+      <Card onSubmit={Submit}>
         <Link style={{ textDecoration: "none" }} to={"/"}>
           <Logo src={logo} />
         </Link>
@@ -80,7 +73,7 @@ const SignUp = () => {
             <p>{errors?.name && errors?.name?.message}</p>
           </InputWrap>
           <InputWrap>
-            <span>Full Name</span>
+            <span>userName</span>
             <Input
               {...register("userName")}
               type={"text"}
@@ -128,7 +121,7 @@ const SignUp = () => {
             <span>Referrer Phone or Promo Code (Optional)</span>
             <Input type={"text"} placeholder="Referrer Phone Or Code" />
           </InputWrap>
-          <Button>create account</Button>
+          <Button type="submit" onClick={Submit}>create account</Button>
         </Wrapper>
         <Link style={{ textDecoration: "none" }} to={"/signIn"}>
           <pre>Already have an account? Log In</pre>
@@ -216,7 +209,7 @@ const Input = styled.input`
     font-weight: 500;
   }
 `;
-const Card = styled.div`
+const Card = styled.form`
   display: flex;
   width: 100%;
   padding-bottom: 20px;
