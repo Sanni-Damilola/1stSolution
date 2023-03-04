@@ -440,7 +440,7 @@ const Top = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid #e2e8f0;
-  border: 10px 10px 10px 0px;
+  border-radius: 10px 10px 10px 0px;
   padding-left: 15px;
   padding-bottom: 15px;
 `;
