@@ -123,7 +123,7 @@ const DashBoard = () => {
         </Link>
         <Link
           style={{ textDecoration: "none" }}
-          to={"/sigIn"}
+          to={"/"}
           onClick={accountRoute}
         >
           <LogoOut
