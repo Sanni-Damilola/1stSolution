@@ -3,7 +3,54 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../Image/logo.svg";
 
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useMutation } from "@tanstack/react-query";
+import { createUser } from "../../Api/Api";
+import { UserData } from "../../interface/interface";
+import { UseAppDispach } from "../../Global/ReduxState/Store";
+import axios from "axios";
+import { User } from "../../Global/ReduxState/State";
+
 const SignIn = () => {
+  const dispatch = UseAppDispach();
+  const navigate = useNavigate();
+  const schema = yup
+    .object({
+      userName: yup.string().required(),
+      email: yup.string().required(),
+      password: yup.string().min(9).required(),
+    })
+    .required();
+
+  type formData = yup.InferType<typeof schema>;
+
+  const {
+    handleSubmit,
+    formState: { errors },
+    reset,
+    register,
+  } = useForm<formData>({
+    resolver: yupResolver(schema),
+  });
+
+  const posting = useMutation({
+    mutationKey: ["created"],
+    mutationFn: createUser,
+
+    onSuccess: (myData) => {
+      console.log(myData)
+      dispatch(User(myData.data));
+    },
+  });
+
+  const Submit = handleSubmit(async (data) => {
+    posting.mutate(data);
+  });
+
+
   return (
     <Container>
       <Card>
@@ -15,11 +62,11 @@ const SignIn = () => {
           <p>Welcome to the future of Savings & Investments</p>
           <InputWrap>
             <span>Email Or Phone Number</span>
-            <Input type={"text"} />
+            <Input {...register("email")} type={"text"} />
           </InputWrap>
           <InputWrap>
             <span>Password</span>
-            <Input type={"password"} />
+            <Input {...register("password")} type={"password"} />
           </InputWrap>
           <Button>login</Button>
         </Wrapper>

@@ -34,3 +34,9 @@ export const TransferMoney = async (data: any, id: any) => {
     .post(`${localUrl}/api/user/sendmoney/${id}/${id}`, data)
     .then((res) => res.data);
 };
+
+export const LoginUser = async ({ email, password }) => {
+  return await axios
+    .post(`${localUrl}/api/user/login/}`, email, password)
+    .then((res) => res.data);
+};

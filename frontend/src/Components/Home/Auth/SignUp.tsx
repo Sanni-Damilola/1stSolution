@@ -93,7 +93,6 @@ const SignUp = () => {
           <InputWrap>
             <span>Phone Number</span>
             <Input
-              {...register("phoneNumber")}
               type={"number"}
               placeholder="Phone Number"
             />
