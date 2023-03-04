@@ -38,7 +38,7 @@ const DashBoadRoute = () => {
           element: <Target />,
         },
         {
-          path: "/savings/safelock",
+          path: "/savings/safelocks",
           element: <SaveLock />,
         },
       ],

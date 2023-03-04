@@ -112,7 +112,6 @@ const Container = styled.div`
   width: calc(100% - 19%);
   display: flex;
   justify-content: center;
-  margin-left: 260px;
   /* background-color: red; */
   overflow: hidden;
 `;
