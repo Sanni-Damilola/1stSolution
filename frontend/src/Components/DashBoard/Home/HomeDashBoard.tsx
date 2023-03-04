@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { UserData } from "../../interface/interface";
 import { GetOneUser } from "../../Api/Api";
-import img from "../Assets/person.png";
+// import img from "../Assets/person.png";
 import { useAppSelector } from "../../Global/ReduxState/Store";
 import Cards from "../Card/Cards";
 import Todo from "../Todo/Todo";
@@ -33,7 +33,7 @@ const HomeDashBoard = () => {
             </P>
           </Left>
           <Right>
-            <Img src={img} />
+            <Img src={""} />
           </Right>
         </Top>
         <Cards />
@@ -87,9 +87,7 @@ const Top = styled.div`
   justify-content: space-between;
 `;
 const Container = styled.div`
-  width: calc(100% - 19%);
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin-left: 290px;
-  /* background-color: red; */
 `;

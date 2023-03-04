@@ -15,7 +15,7 @@ const ReduxState = createSlice({
     },
 
     logout: (state) => {
-      state.currentUser = null
+      state.currentUser = null;
     },
   },
 });

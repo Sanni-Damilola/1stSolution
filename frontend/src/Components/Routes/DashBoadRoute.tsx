@@ -1,12 +1,12 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
-import DashBoard from "../DashBoard/DashBoard";
+import HomeDashBoard from "../DashBoard/Home/HomeDashBoard";
 
 const DashBoadRoute = () => {
   const element = useRoutes([
     {
       path: "/",
-      element: <DashBoard />,
+      element: <HomeDashBoard />,
     },
   ]);
   return element;
