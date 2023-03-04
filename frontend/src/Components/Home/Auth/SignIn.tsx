@@ -40,10 +40,10 @@ const SignIn = () => {
     mutationFn: LoginUser,
 
     onSuccess: (myData) => {
-      console.log("here",myData);
-      // dispatch(User(myData.data));
+      dispatch(User(myData.data));
     },
   });
+  console.log("here", posting);
 
   const Submit = handleSubmit(async (data) => {
     posting.mutate(data);
