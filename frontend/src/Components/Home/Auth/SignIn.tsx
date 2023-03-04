@@ -42,7 +42,7 @@ const SignIn = () => {
 
     onSuccess: (myData) => {
       console.log(myData)
-      dispatch(User(myData.data));
+      // dispatch(User(myData.data));
     },
   });
 
@@ -66,7 +66,10 @@ const SignIn = () => {
           </InputWrap>
           <InputWrap>
             <span>Password</span>
-            <Input {...register("password")} type={"password"} />
+            <Input
+              {...register("password")}
+              type={"password"}
+            />
           </InputWrap>
           <Button>login</Button>
         </Wrapper>
