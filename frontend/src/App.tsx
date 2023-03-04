@@ -17,8 +17,6 @@ function App() {
     queryFn: () => GetOneUser(user?._id),
   });
 
-  console.log(fetchUser);
-
   return <div>{user?.name ? <DashBoard /> : <HomeRoutes />}</div>;
 }
 

@@ -6,8 +6,10 @@ import logo from "../Image/logo.svg";
 import { ImHome2 } from "react-icons/im";
 import { RxPerson, RxTarget } from "react-icons/rx";
 import { IoRocketOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import DashBoadRoute from "../Routes/DashBoadRoute";
+import { UseAppDispach } from "../Global/ReduxState/Store";
+import { logout } from "../Global/ReduxState/State";
 
 const DashBoard = () => {
   // menu menuSidebar functions 👇👇
@@ -50,6 +52,9 @@ const DashBoard = () => {
     setInvest(true);
     setHome(true);
   }; // menu bar
+
+  const dispatch = UseAppDispach();
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -116,7 +121,11 @@ const DashBoard = () => {
             icon={<RxPerson />}
           />
         </Link>
-        <LogoOut>
+        <LogoOut
+          onClick={() => {
+            dispatch(logout());
+          }}
+        >
           <Icon>
             <AiOutlineLogout />
           </Icon>
