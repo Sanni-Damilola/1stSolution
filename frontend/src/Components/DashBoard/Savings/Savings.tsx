@@ -72,7 +72,7 @@ const Top = styled.div`
   justify-content: space-between;
 `;
 const Container = styled.div`
-  width: calc(100% - 19%);
+  width: 100%;
   display: flex;
   justify-content: center;
 `;

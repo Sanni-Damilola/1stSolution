@@ -23,7 +23,7 @@ const Target = () => {
             <NavLink to="/savings/piggybank" style={{ textDecoration: "none" }}>
               <Navs2>Piggybank</Navs2>
             </NavLink>
-            <NavLink to="/savings/safelock" style={{ textDecoration: "none" }}>
+            <NavLink to="/savings/safelocks" style={{ textDecoration: "none" }}>
               <Navs2>Safelock</Navs2>
             </NavLink>
             <NavLink to="/savings/target" style={{ textDecoration: "none" }}>
@@ -114,7 +114,6 @@ const Container = styled.div`
   width: calc(100% - 19%);
   display: flex;
   justify-content: center;
-  margin-left: 250px;
   /* background-color: red; */
   overflow: hidden;
   margin-bottom: 60px;

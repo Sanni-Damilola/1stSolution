@@ -6,7 +6,7 @@ import logo from "../Image/logo.svg";
 import { ImHome2 } from "react-icons/im";
 import { RxPerson, RxTarget } from "react-icons/rx";
 import { IoRocketOutline } from "react-icons/io5";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import DashBoadRoute from "../Routes/DashBoadRoute";
 
 const DashBoard = () => {
@@ -60,7 +60,7 @@ const DashBoard = () => {
           </Menu>
           <Logo src={logo} />
         </MenuWrapper>
-        <Hold onClick={homeRoute}>
+        <Link style={{ textDecoration: "none" }} to={"/"} onClick={homeRoute}>
           <SideBarProps
             paddingleft={home ? "" : "value"}
             bg={home ? "" : "value"}
@@ -70,8 +70,12 @@ const DashBoard = () => {
             text="home"
             icon={<ImHome2 />}
           />
-        </Hold>
-        <Hold onClick={savingsRoute}>
+        </Link>
+        <Link
+          style={{ textDecoration: "none" }}
+          to={"/savings"}
+          onClick={savingsRoute}
+        >
           <SideBarProps
             paddingleft={savings ? "" : "value"}
             bg={savings ? "" : "value"}
@@ -81,8 +85,12 @@ const DashBoard = () => {
             text="savings"
             icon={<RxTarget />}
           />
-        </Hold>
-        <Hold onClick={investRoute}>
+        </Link>
+        <Link
+          style={{ textDecoration: "none" }}
+          to={"/invest"}
+          onClick={investRoute}
+        >
           <SideBarProps
             paddingleft={invest ? "" : "value"}
             bg={invest ? "" : "value"}
@@ -92,8 +100,12 @@ const DashBoard = () => {
             text="invest"
             icon={<IoRocketOutline />}
           />
-        </Hold>
-        <Hold onClick={accountRoute}>
+        </Link>
+        <Link
+          style={{ textDecoration: "none" }}
+          to={"/account"}
+          onClick={accountRoute}
+        >
           <SideBarProps
             paddingleft={account ? "" : "value"}
             bg={account ? "" : "value"}
@@ -103,13 +115,13 @@ const DashBoard = () => {
             text="account"
             icon={<RxPerson />}
           />
-          <LogoOut>
-            <Icon>
-              <AiOutlineLogout />
-            </Icon>
-            <LogOutText>logout</LogOutText>
-          </LogoOut>
-        </Hold>
+        </Link>
+        <LogoOut>
+          <Icon>
+            <AiOutlineLogout />
+          </Icon>
+          <LogOutText>logout</LogOutText>
+        </LogoOut>
       </MenuBar>
       <ManinDasboard>
         <DashBoadRoute />
@@ -183,4 +195,5 @@ const MenuBar = styled.div<{ width: string }>`
 `;
 const ManinDasboard = styled.div`
   width: 100%;
+  background-color: white;
 `;

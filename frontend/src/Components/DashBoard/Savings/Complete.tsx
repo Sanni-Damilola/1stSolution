@@ -29,7 +29,7 @@ const Complete = () => {
         {fetchUser?.data ? (
           <h3>{fetchUser?.data?.data?.accountNumber}</h3>
         ) : (
-          <h3>no</h3>
+          <h3>Account unavalable</h3>
         )}
       </Left>
     </Container>
@@ -66,7 +66,7 @@ const Right = styled.div`
 `;
 
 const Left = styled.div`
-  width: 63%;
+  width: 45%;
   display: flex;
   height: 150px;
   border: 1px solid #e2e8f0;
@@ -82,6 +82,7 @@ const Left = styled.div`
     font-family: U8, sans-serif;
     margin: 0;
     font-size: 40px;
+    text-transform: capitalize;
   }
   p {
     color: #4a5568;

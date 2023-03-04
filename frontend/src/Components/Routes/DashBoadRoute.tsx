@@ -7,19 +7,24 @@ import Piggybank from "../DashBoard/Savings/Piggybank";
 import SavingsDashboard from "../DashBoard/Savings/SavingsDashBoard";
 import Target from "../DashBoard/Savings/Target";
 import SaveLock from "../DashBoard/Savings/SaveLock";
+import Account from "../DashBoard/Acount/Account";
 
 const DashBoadRoute = () => {
   const element = useRoutes([
     {
-      path: "/eee",
-      element: <HomeDashBoard />,
-    },
-    {
-      path: "/sdfghj",
-      element: <HomeDashBoard />,
-    },
-    {
       path: "/",
+      element: <HomeDashBoard />,
+    },
+    {
+      path: "/account",
+      element: <Account />,
+    },
+    {
+      path: "/invest",
+      element: <Investify />,
+    },
+    {
+      path: "/savings",
       children: [
         {
           index: true,
@@ -42,10 +47,6 @@ const DashBoadRoute = () => {
           element: <SaveLock />,
         },
       ],
-    },
-    {
-      path: "/invest",
-      element: <Investify />,
     },
   ]);
   return element;
