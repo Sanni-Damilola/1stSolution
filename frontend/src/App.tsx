@@ -5,8 +5,8 @@ import HomeRoutes from "./Components/Routes/HomeRoutes";
 function App() {
   return (
     <div>
-      {/* <HomeRoutes /> */}
-      <DashBoard />
+      <HomeRoutes />
+      {/* <DashBoard /> */}
     </div>
   );
 }

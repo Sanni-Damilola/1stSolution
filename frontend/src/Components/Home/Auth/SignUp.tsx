@@ -2,8 +2,65 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../Image/logo.svg";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useMutation } from "@tanstack/react-query";
+import { createUser } from "../../Api/Api";
+import { UserData } from "../../interface/interface";
+import { UseAppDispach } from "../../Global/ReduxState/Store";
+import axios from "axios";
+import { User } from "../../Global/ReduxState/State";
 
 const SignUp = () => {
+  const dispatch = UseAppDispach();
+  const navigate = useNavigate();
+  const schema = yup
+    .object({
+      name: yup.string().required("field must be required"),
+      userName: yup.string().required("field must be required"),
+      email: yup.string().required("field must be required"),
+      phoneNumber: yup.number().required("field must be required"),
+      password: yup.string().min(9).required(),
+      confirmpassword: yup
+        .string()
+        .oneOf([yup.ref("password")])
+        .required(),
+    })
+    .required();
+
+  type formData = yup.InferType<typeof schema>;
+
+  const {
+    handleSubmit,
+    formState: { errors },
+    reset,
+    register,
+  } = useForm<formData>({
+    resolver: yupResolver(schema),
+  });
+
+  const posting = useMutation({
+    mutationKey: ["created"],
+    mutationFn: createUser,
+
+    onSuccess: (myData) => {
+      // console.log("user", myData);
+      dispatch(User(myData.data));
+      navigate("/dashboard");
+    },
+  });
+
+  const Submit = handleSubmit(async (data) => {
+    posting.mutate(data);
+    // await axios.post(`${localUrl}/api/user/register`, data).then((res) => {
+    // console.log(res);
+    // });
+
+    // reset()
+  });
+
   return (
     <Container>
       <Card>
@@ -15,22 +72,57 @@ const SignUp = () => {
           <p>Welcome to the future of Savings & Investments</p>
           <InputWrap>
             <span>Full Name</span>
-            <Input type={"text"} placeholder="Full Name" />
+            <Input
+              {...register("name")}
+              type={"text"}
+              placeholder="Full Name"
+            />
+            <p>{errors?.name && errors?.name?.message}</p>
+          </InputWrap>
+          <InputWrap>
+            <span>Full Name</span>
+            <Input
+              {...register("userName")}
+              type={"text"}
+              placeholder="userName"
+            />
+            <p>{errors?.name && errors?.name?.message}</p>
           </InputWrap>
           <InputWrap>
             <span>Email Address</span>
             <Input
+              {...register("email")}
               type={"email"}
               placeholder="Email Address: sannifortune@example.com"
             />
+            <p>{errors?.email && errors?.email?.message}</p>
           </InputWrap>
           <InputWrap>
             <span>Phone Number</span>
-            <Input type={"number"} placeholder="Phone Number" />
+            <Input
+              {...register("phoneNumber")}
+              type={"number"}
+              placeholder="Phone Number"
+            />
+            <p>{errors?.phoneNumber && errors?.phoneNumber?.message}</p>
           </InputWrap>
           <InputWrap>
             <span>Password</span>
-            <Input type={"password"} placeholder="Password" />
+            <Input
+              {...register("password")}
+              type={"password"}
+              placeholder="Password"
+            />
+            <p>{errors?.password && errors?.password?.message}</p>
+          </InputWrap>
+          <InputWrap>
+            <span>Password</span>
+            <Input
+              {...register("confirmpassword")}
+              type={"password"}
+              placeholder="confirmpassword"
+            />
+            <p>{errors?.confirmpassword && errors?.confirmpassword?.message}</p>
           </InputWrap>
           <InputWrap>
             <span>Referrer Phone or Promo Code (Optional)</span>

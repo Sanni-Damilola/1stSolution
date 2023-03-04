@@ -1,7 +1,7 @@
 import axios from "axios";
 import { UserData } from "../interface/interface";
 
-const localUrl = "http://localhost:6400";
+const localUrl = "http://localhost:2001";
 
 export const createUser = async ({
   name,
