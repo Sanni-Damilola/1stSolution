@@ -15,7 +15,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-const localUrl = "http://localhost:6400";
+const localUrl = "http://localhost:2001";
 const Cards = () => {
   const user = useAppSelector((state) => state.currentUser);
   const [show, setShow] = useState(false);
